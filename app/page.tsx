@@ -77,7 +77,7 @@ export default function Home() {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-lg flex-1"
               >
-                <p className="text-lg italic mb-4">"{testimonial.feedback}"</p>
+<p className="text-lg italic mb-4">{`"${testimonial.feedback}"`}</p>
                 <p className="font-semibold">— {testimonial.name}</p>
               </div>
             ))}
@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-semibold text-center mb-8">Зв'язатися з нами</h2>
+        <h2 className="text-3xl font-semibold text-center mb-8">{`Зв'язатися з нами`}</h2>
         <div className="flex flex-col md:flex-row justify-center gap-8">
           <div className="bg-white p-6 rounded-lg shadow-lg w-full md:w-80">
             <h3 className="text-xl font-semibold mb-4">Контакти</h3>
