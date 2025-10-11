@@ -5,7 +5,7 @@ import { SiViber } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 border-t mt-12">
+    <footer className="bg-gray-100 border-t">
       <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         <Image
           src="/imgs/logo-kabinet-kobyliaka-1.png"
