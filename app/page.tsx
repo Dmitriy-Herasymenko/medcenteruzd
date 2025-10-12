@@ -50,7 +50,7 @@ function HeroSection() {
   )
 }
 
-function WhyChooseUs() {
+function WhyChooseUsSection() {
   const items = [
     {
       title: "Досвідчені фахівці:",
@@ -112,7 +112,7 @@ function WhyChooseUs() {
   );
 }
 
-function AboutUs() {
+function AboutUsSection() {
 
   return (
     <section className="container mx-auto px-4 py-16 bg-[#edf5fd]">
@@ -262,17 +262,125 @@ function ServicesSection() {
   );
 }
 
+function SpecialistsSection() {
+
+  return (
+    <section className="bg-[#edf5fd] py-16 px-12">
+      <h2 className="text-3xl font-bold text-center mb-12">Кваліфіковані спеціалісти УЗД</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+        <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+          <Image
+            src="/imgs/kobyliak-igor-an-2048x1695.webp"
+            alt="Медичний центр УЗД"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        <div className="space-y-4 md:pl-6">
+          <h3 className="text-2xl font-semibold text-gray-800">
+            Кобиляк Ігор Анатолійович
+          </h3>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Спеціальність:</p>
+
+            Лікар терапевт, лікар з ультразвукової діагностики
+          </span>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Досвід:</p>
+
+            Лікар терапевт вищої категорії, лікар УЗД вищої категорії
+          </span>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Практика:</p>
+
+            з 1993
+          </span>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Е-пошта:</p>
+
+            medcenteruzd@gmail.com
+
+          </span>
+          <div className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Телефон:</p>
+            +38 067 493 51 04
+          </div>
+          <button className="bg-[#133b88] px-6 py-2 text-white font-semibold rounded-full shadow-lg hover:bg-gray-100 hover:text-black transition cursor-pointer">
+            Записатися
+          </button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-12">
+
+        <div className="space-y-4 md:pl-6">
+          <h3 className="text-2xl font-semibold text-gray-800">
+            Кобиляк Олена Олексіївна
+          </h3>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Спеціальність:</p>
+
+            Лікар ультразвукової діагностики
+          </span>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Досвід:</p>
+
+            Лікар УЗД 1 категорії
+          </span>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Практика:</p>
+
+            З 2010 року
+          </span>
+          <span className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Е-пошта:</p>
+
+
+            Kobilyakelena@gmail.com
+
+          </span>
+          <div className="text-gray-600 leading-relaxed">
+            <p className="font-bold">Телефон:</p>
+            +38 067 123 45 67
+          </div>
+          <button className="bg-[#133b88] px-6 py-2 text-white font-semibold rounded-full shadow-lg hover:bg-gray-100 hover:text-black transition cursor-pointer">
+            Записатися
+          </button>
+        </div>
+
+        <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+          <Image
+            src="/imgs/kobyliak-olena-2-2048x1695.webp"
+            alt="Медичний центр УЗД"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+
+      </div>
+
+    </section>
+  );
+}
+
+
 function TestimonialsSection() {
   const testimonials = [
-  { name: "Юлія", feedback: "Безмежно вдячна за тепле ставлення та професіоналізм." },
-  { name: "Василь", feedback: "Мудрий, знаючий, досвідчений лікар." },
-  { name: "Наталія", feedback: "Дуже гарний лікар!" },
     { name: "Юлія", feedback: "Безмежно вдячна за тепле ставлення та професіоналізм." },
-  { name: "Василь", feedback: "Мудрий, знаючий, досвідчений лікар." },
-  { name: "Наталія", feedback: "Дуже гарний лікар!" },
-];
+    { name: "Василь", feedback: "Мудрий, знаючий, досвідчений лікар." },
+    { name: "Наталія", feedback: "Дуже гарний лікар!" },
+    { name: "Юлія", feedback: "Безмежно вдячна за тепле ставлення та професіоналізм." },
+    { name: "Василь", feedback: "Мудрий, знаючий, досвідчений лікар." },
+    { name: "Наталія", feedback: "Дуже гарний лікар!" },
+  ];
   return (
-    <section className="bg-[#edf5fd] py-16">
+    <section className="px-12 py-16">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-semibold mb-8">Відгуки наших пацієнтів</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -297,9 +405,10 @@ export default function Home() {
     <div className="space-y-16">
 
       {HeroSection()}
-      {WhyChooseUs()}
-      {AboutUs()}
+      {WhyChooseUsSection()}
+      {AboutUsSection()}
       {ServicesSection()}
+      {SpecialistsSection()}
       {TestimonialsSection()}
     </div>
   );
