@@ -1,23 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const services = [
-  {
-    title: "УЗД органів малого тазу",
-    description: "Безпечне та безболісне дослідження.",
-  },
-  {
-    title: "УЗД щитовидної залози",
-    description: "Швидка та точна діагностика.",
-  },
-  {
-    title: "Еластографія печінки",
-    description: "Оцінка стану печінки без інвазивних процедур.",
-  },
-];
-
-
-
 function HeroSection() {
   return (
     <section className="relative min-h-screen bg-[#133b88] flex items-center justify-center text-white overflow-hidden">
@@ -27,7 +10,7 @@ function HeroSection() {
           alt="УЗД діагностика"
           fill
           priority
-          className="object-cover object-center opacity-60"
+          className="object-cover object-center"
         />
       </div>
 
