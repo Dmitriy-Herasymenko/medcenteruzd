@@ -32,11 +32,11 @@ export default function Header() {
  
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/imgs/logo-kabinet-kobyliaka-1.png"
+            src="/imgs/logo.png"
             alt="Медцентр УЗД"
-            width={140}
+            width={120}
             height={50}
-            className="h-10 w-auto"
+     
           />
         </Link>
 
