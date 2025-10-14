@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
@@ -21,11 +22,11 @@ export default function SpecialistsSlider({ slides }) {
     autoplaySpeed: 4000,
     adaptiveHeight: true,
   };
-
+  const { t } = useTranslation("common");
   return (
     <>
       <h2 className="text-3xl md:text-4xl font-bold text-[#133b88] text-center mb-8">
-        Кваліфіковані спеціалісти УЗД
+        {t("mainPage.qualifiedSpecialistsTitle")}
       </h2>
       <Slider {...settings} className="space-y-8">
         {slides.map((s, idx) => (
@@ -67,7 +68,7 @@ export default function SpecialistsSlider({ slides }) {
                 </p>
 
                 <button className="bg-[#133b88] px-6 py-2 text-white font-semibold rounded-full shadow-lg hover:bg-gray-100 hover:text-black transition cursor-pointer">
-                  Записатися
+                  {t("btn")}
                 </button>
               </div>
             </div>
