@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { SiViber } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation("common");
   return (
     <footer className="bg-gray-100 border-t">
       <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -12,42 +15,42 @@ export default function Footer() {
           alt="Медцентр УЗД"
           width={250}
           height={250}
-          className="h-12 w-auto"
+          className="h-12 w-auto m-auto md:m-0"
         />
         <div>
 
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">
-            Контакти
+          <h3 className="text-lg font-semibold text-gray-800 mb-3 text-center md:text-left">
+            {t("footer.footerContactsTitle")}
           </h3>
-          <p className="text-gray-600 mt-1">
-            Тел: <a href="tel:+380674935104" className="hover:underline">+38 067 493 51 04</a>
+          <p className="text-gray-600 mt-1 text-center md:text-left">
+            {t("footer.footerPhone")} <a href="tel:+380674935104" className="hover:underline">+38 067 493 51 04</a>
           </p>
-          <p className="text-gray-600">м. Умань, вул. Шевченка, 50</p>
+          <p className="text-gray-600 text-center md:text-left">{t("footer.footerAddress")}</p>
 
-          <p className="text-gray-600 mt-1">
-            Email: <a href="mailto:medcenteruzd@gmail.com" className="hover:underline">medcenteruzd@gmail.com</a>
+          <p className="text-gray-600 mt-1 text-center md:text-left">
+            {t("footer.footerEmail")} <a href="mailto:medcenteruzd@gmail.com" className="hover:underline">medcenteruzd@gmail.com</a>
           </p>
         </div>
 
-        <div>
+        <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold text-gray-800 mb-3">
-            Інформація
+            {t("footer.footerInfoTitle")}
           </h3>
           <ul className="space-y-2">
-            <li><Link href="/services">Послуги</Link></li>
-            <li><Link href="/doctors">Лікарі</Link></li>
-            <li><Link href="/contacts">Контакти</Link></li>
-            <li><Link href="/blog">Статі</Link></li>
+            <li><Link href="/services">     {t("footer.footerServicesLink")}</Link></li>
+            <li><Link href="/doctors">{t("footer.footerDoctorsLink")}</Link></li>
+            <li><Link href="/contacts">{t("footer.footerContactsLink")}</Link></li>
+            <li><Link href="/blog">{t("footer.footerBlogLink")}</Link></li>
           </ul>
         </div>
 
-        <div>
+        <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold text-gray-800 mb-3">
-            Соціальні мережі
+            {t("footer.footerSocialTitle")}
           </h3>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 justify-center md:justify-start">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/igor.kobilak.2025"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-800 transition-colors"
@@ -57,7 +60,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/dr.kobyliak"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-800 transition-colors"
@@ -67,7 +70,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://tinyurl.com/464btays"
               className="text-gray-600 hover:text-gray-800 transition-colors"
               aria-label="Viber"
             >
