@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import I18nProvider from "@/providers/I18nProvider";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: "Медцентр УЗД",
@@ -15,13 +16,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="uk">
-      <body className="min-h-screen flex flex-col">
-        <I18nProvider>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </I18nProvider>
+    <html lang="uk" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-white dark:bg-[#191919] text-[#37352f] dark:text-[#ffffffcf]">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <I18nProvider>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </I18nProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

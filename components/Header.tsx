@@ -5,6 +5,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "next-themes";
 
 const navLinks = [
   { href: "/", key: "header.mainLink" },
@@ -26,11 +27,10 @@ const LangSwitch = ({
       <button
         key={l}
         onClick={() => onChange(l)}
-        className={`w-7 h-7 flex items-center justify-center rounded-full text-[13px] font-medium transition cursor-pointer ${
-          currentLang === l
-            ? "bg-[#133b88] text-white"
-            : "text-gray-600 hover:text-[#133b88]"
-        }`}
+        className={`w-7 h-7 flex items-center justify-center rounded-full text-[13px] font-medium transition cursor-pointer ${currentLang === l
+          ? "bg-[#133b88] text-white"
+          : "text-gray-600 hover:text-[#133b88]"
+          }`}
       >
         {l.toUpperCase()}
       </button>
@@ -38,12 +38,14 @@ const LangSwitch = ({
   </div>
 );
 
+type Theme = 'light' | 'dark';
+
 
 const ThemeSwitch = ({
   theme,
   onToggle,
 }: {
-  theme: string;
+  theme: string | undefined;
   onToggle: () => void;
 }) => (
   <button
@@ -73,11 +75,10 @@ const NavLinks = ({
         key={link.href}
         href={link.href}
         onClick={onClick}
-        className={`${
-          vertical
-            ? "font-semibold text-gray-700 hover:text-[#133b88] text-center"
-            : "text-gray-700 text-sm font-semibold uppercase hover:text-[#133b88] transition-colors text-[14px]"
-        }`}
+        className={`${vertical
+          ? "font-semibold text-gray-700 dark:text-[#fff] hover:text-[#133b88] text-center"
+          : "text-gray-700 dark:text-[#fff] text-sm font-semibold uppercase hover:text-[#133b88] transition-colors text-[14px]"
+          }`}
       >
         {t(link.key)}
       </Link>
@@ -88,7 +89,8 @@ const NavLinks = ({
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [lang, setLang] = useState("ua");
-  const [theme, setTheme] = useState("light");
+  // const [themeLocal, setThemeLocal] = useState("light")
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   const { t, i18n } = useTranslation("common");
@@ -102,15 +104,16 @@ export default function Header() {
     i18n.changeLanguage(l);
   };
 
-  const toggleTheme = () =>
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
 
   if (!mounted) return null;
-
   return (
-    <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+    <header className={`bg-white dark:bg-gray-900 shadow-sm border-b sticky top-0 z-50`}>
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
- 
+
         <Link href="/" className="flex items-center gap-2">
           <Image src="/imgs/logo.png" alt="Медцентр УЗД" width={120} height={50} />
         </Link>
@@ -127,7 +130,7 @@ export default function Header() {
 
         {/* Mobile actions */}
         <div className="flex md:hidden items-center gap-3">
-          <button className="bg-[#133b88] hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
+          <button className="bg-[#133b88]  hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
             {t("header.btn")}
           </button>
           <button
@@ -142,7 +145,7 @@ export default function Header() {
 
       {/* Mobile nav */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t shadow animate-slide-down">
+        <div className="md:hidden bg-white dark:bg-gray-900 border-t shadow animate-slide-down">
           <div className="px-4 py-4">
             <NavLinks links={navLinks} t={t} onClick={() => setMenuOpen(false)} vertical />
             <hr className="my-4" />
