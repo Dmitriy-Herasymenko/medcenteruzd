@@ -76,17 +76,17 @@ function AboutAndWhySection(t: (key: string) => string) {
             />
           </div>
 
-          <div className="space-y-5 text-gray-700 text-center md:text-left">
+          <div className="space-y-5  text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-[#133b88] ">
               {t("mainPage.aboutUs")}
             </h2>
             <h3 className="text-xl md:text-2xl font-semibold">
               {t("mainPage.modernCenterTitle")}
             </h3>
-            <p className="leading-relaxed text-gray-600">
+            <p className="leading-relaxed ">
               {t("mainPage.centerDescription")}
             </p>
-            <p className="leading-relaxed text-gray-600">
+            <p className="leading-relaxed ">
               {t("mainPage.experiencedDoctors")}
             </p>
 
@@ -100,7 +100,7 @@ function AboutAndWhySection(t: (key: string) => string) {
           <h2 className="text-3xl md:text-4xl font-bold text-[#133b88]">
             {t("mainPage.whyChooseUs")}
           </h2>
-          <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+          <p className="mt-3 max-w-2xl mx-auto">
             {t("mainPage.whyChooseUsDescription")}
           </p>
         </div>
@@ -109,7 +109,7 @@ function AboutAndWhySection(t: (key: string) => string) {
           {items.map((item, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 text-center transition-all duration-300"
+              className="bg-white dark:bg-[#133b88] rounded-2xl shadow-md hover:shadow-xl p-6  text-center transition-all duration-300"
             >
               <div className="flex justify-center mb-4">
                 <Image
@@ -120,10 +120,10 @@ function AboutAndWhySection(t: (key: string) => string) {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-600 text-sm">{item.description}</p>
+              <p className="text-gray-600 dark:text-white text-sm">{item.description}</p>
             </div>
           ))}
         </div>
@@ -152,7 +152,7 @@ function ServicesSection(t: (key: string) => string) {
   const visibleItems = showAll ? items : items.slice(0, 8);
 
   return (
-    <section className="bg-[#edf5fd] py-16 px-6 md:px-12 text-center">
+    <section className="bg-[#edf5fd] dark:bg-gray-900  py-16 px-6 md:px-12 text-center">
       <h2 className="text-3xl font-bold mb-12 text-[#133b88]">{t("mainPage.ultrasoundServicesTitle")}</h2>
 
       <div
@@ -162,13 +162,13 @@ function ServicesSection(t: (key: string) => string) {
         {visibleItems.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-[20px] shadow-md p-6 flex flex-col relative overflow-hidden hover:shadow-lg transition-shadow"
+            className="bg-white dark:bg-[#133b88] rounded-[20px] shadow-md p-6 flex flex-col relative overflow-hidden hover:shadow-lg transition-shadow"
           >
             <div className="flex justify-center mb-4">
               <Image src={item.imgUrl} alt={item.title} width={40} height={40} className="object-contain" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">{item.title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+            <h3 className="text-lg dark:text-white font-semibold text-gray-800 mb-4">{item.title}</h3>
+            <p className="text-gray-600 dark:text-white text-sm leading-relaxed">{item.description}</p>
           </div>
         ))}
       </div>
@@ -226,7 +226,7 @@ function TestimonialsSection(t: (key: string) => string) {
   ];
 
   return (
-    <section className="px-6 md:px-12 py-16 bg-[#edf5fd]">
+    <section className="px-6 md:px-12 py-16 bg-[#edf5fd] dark:bg-gray-900">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-[#133b88] mb-12">
           Відгуки наших пацієнтів
@@ -236,17 +236,17 @@ function TestimonialsSection(t: (key: string) => string) {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-1"
+              className="relative bg-white dark:bg-[#133b88] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-1"
             >
-              {/* Лапки */}
+       
               <div className="absolute -top-4 left-6 text-5xl text-[#133b88]/20 select-none">
                 “
               </div>
 
-              <p className="text-gray-700 text-lg italic mb-6 leading-relaxed">
+              <p className="text-gray-700 dark:text-white text-lg italic mb-6 leading-relaxed">
                 {testimonial.feedback}
               </p>
-              <p className="text-gray-900 font-semibold text-right">— {testimonial.name}</p>
+              <p className="text-gray-900 dark:text-white  font-semibold text-right">— {testimonial.name}</p>
             </div>
           ))}
         </div>
