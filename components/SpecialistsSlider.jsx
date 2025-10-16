@@ -44,26 +44,26 @@ export default function SpecialistsSlider({ slides }) {
                 className="object-cover w-full h-full"
                 priority
               />
-              <div className="w-full text-center md:text-start md:w-1/2 space-y-4 text-gray-700">
+              <div className="w-full text-center md:text-start md:w-1/2 space-y-4">
                 <h3 className="text-xl md:text-2xl font-semibold">{s.name}</h3>
 
-                <p className="text-gray-600">
+                <p className="">
                   <span className="font-bold">Спеціальність:</span> {s.specialization}
                 </p>
 
-                <p className="text-gray-600">
+                <p className="">
                   <span className="font-bold">Досвід:</span> {s.experience}
                 </p>
 
-                <p className="text-gray-600">
+                <p className="">
                   <span className="font-bold">Практика:</span> {s.practiceSince}
                 </p>
 
-                <p className="text-gray-600">
+                <p className="">
                   <span className="font-bold">Е-пошта:</span> {s.email}
                 </p>
 
-                <p className="text-gray-600">
+                <p className="">
                   <span className="font-bold">Телефон:</span> {s.phone}
                 </p>
 
