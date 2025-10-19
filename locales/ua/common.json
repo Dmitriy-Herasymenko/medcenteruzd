@@ -91,5 +91,17 @@
     "footerBlogLink": "Статі",
     "footerSocialTitle": "Соціальні мережі"
   },
+  "modal": {
+    "title": "Запис на дослідження",
+    "nameLabel": "Ім’я",
+    "namePlaceholder": "Введіть ваше ім'я",
+    "phoneLabel": "Телефон",
+    "phonePlaceholder": "Введіть ваш телефон",
+    "email": "Е-пошта",
+    "emailPlaceholder": "Введіть вашу е-пошту",
+    "messageLabel": "Повідомлення",
+    "messagePlaceholder": "Введіть ваше повідомлення",
+    "submitBtn": "Надіслати"
+  },
   "btn": "Записатися"
 }

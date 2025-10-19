@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Button from "@/components/Button";
+import Modal from "@/components/Modal";
+import AppointmentForm from "@/components/AppointmentForm";
 
 const navLinks = [
   { href: "/", key: "header.mainLink" },
@@ -92,6 +94,8 @@ export default function Header() {
   const [lang, setLang] = useState("ua");
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   const { t, i18n } = useTranslation("common");
 
@@ -124,17 +128,20 @@ export default function Header() {
           {/* <button className="bg-[#133b88] hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
             {t("header.btn")}
           </button> */}
-          <Button variant="primary" children={t("header.btn")}/>
+          <Button variant="primary" children={t("header.btn")} onClick={() => setIsModalOpen(true)} />
           <LangSwitch currentLang={lang} onChange={changeLang} />
           <ThemeSwitch theme={theme} onToggle={toggleTheme} />
         </div>
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <AppointmentForm  onSuccess={() => setIsModalOpen(false)}/>
+        </Modal>
 
         {/* Mobile actions */}
         <div className="flex md:hidden items-center gap-3">
           {/* <button className="bg-[#133b88]  hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
             {t("header.btn")}
           </button> */}
-                    <Button variant="primary" children={t("header.btn")} size="sm"/>
+          <Button variant="primary" children={t("header.btn")} size="sm" onClick={() => setIsModalOpen(true)} />
           <button
             className="p-2 text-gray-700 text-3xl"
             onClick={() => setMenuOpen(!menuOpen)}
