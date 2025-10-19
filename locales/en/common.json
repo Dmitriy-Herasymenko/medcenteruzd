@@ -91,5 +91,17 @@
     "footerBlogLink": "Articles",
     "footerSocialTitle": "Social Media"
   },
+  "modal": {
+  "title": "Appointment Request",
+  "nameLabel": "Name",
+  "namePlaceholder": "Enter your name",
+  "phoneLabel": "Phone",
+  "phonePlaceholder": "Enter your phone number",
+  "email": "Email",
+  "emailPlaceholder": "Enter your email",
+  "messageLabel": "Message",
+  "messagePlaceholder": "Enter your message",
+  "submitBtn": "Send"
+},
   "btn": "Sign up"
 }
