@@ -5,8 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import SpecialistsSlider from "../components/SpecialistsSlider";
 import { useTranslation } from "react-i18next";
+import Modal from "@/components/Modal";
+import AppointmentForm from "@/components/AppointmentForm";
 
-function HeroSection(t: (key: string) => string) {
+function HeroSection(t: (key: string) => string, setIsModalOpen: (open: boolean) => void) {
   return (
     <section className="relative min-h-screen bg-[#133b88] flex items-center justify-center text-white overflow-hidden">
       <div className="absolute inset-0">
@@ -29,6 +31,10 @@ function HeroSection(t: (key: string) => string) {
         <Link
           href="/appointment"
           className="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+          onClick={(e) => {
+            e.preventDefault();
+            setIsModalOpen(true);
+          }}
         >
           {t("mainPage.btn")}
         </Link>
@@ -262,7 +268,7 @@ function ServicesSection(t: (key: string) => string) {
   );
 }
 
-function SpecialistsSection(t: (key: string) => string) {
+function SpecialistsSection(t: (key: string) => string, setIsModalOpen: (open: boolean) => void) {
   const specialists = [
     {
       name: t("mainPage.specialist1Name"),
@@ -286,7 +292,7 @@ function SpecialistsSection(t: (key: string) => string) {
 
   return (
     <section className="py-16 px-12">
-      <SpecialistsSlider slides={specialists} />
+      <SpecialistsSlider slides={specialists} onClick={setIsModalOpen} />
     </section>
   );
 }
@@ -332,17 +338,20 @@ function TestimonialsSection(t: (key: string) => string) {
 }
 
 export default function Home() {
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslation("common");
 
   return (
     <div className="space-y-16">
 
-      {HeroSection(t)}
+      {HeroSection(t, setIsModalOpen)}
       {AboutAndWhySection(t)}
       {ServicesSection(t)}
-      {SpecialistsSection(t)}
+      {SpecialistsSection(t, setIsModalOpen)}
       {TestimonialsSection(t)}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <AppointmentForm onSuccess={() => setIsModalOpen(false)} />
+      </Modal>
     </div>
   );
 }

@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function SpecialistsSlider({ slides }) {
+export default function SpecialistsSlider({ slides, onClick }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -67,7 +67,8 @@ export default function SpecialistsSlider({ slides }) {
                   <span className="font-bold">Телефон:</span> {s.phone}
                 </p>
 
-                <button className="bg-[#133b88] px-6 py-2 text-white font-semibold rounded-full shadow-lg hover:bg-gray-100 hover:text-black transition cursor-pointer">
+                <button className="bg-[#133b88] px-6 py-2 text-white font-semibold rounded-full shadow-lg hover:bg-gray-100 hover:text-black transition cursor-pointer"
+                  onClick={() => onClick(true)}>
                   {t("btn")}
                 </button>
               </div>
