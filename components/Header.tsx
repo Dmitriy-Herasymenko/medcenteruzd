@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
+import Button from "@/components/Button";
 
 const navLinks = [
   { href: "/", key: "header.mainLink" },
@@ -89,7 +90,6 @@ const NavLinks = ({
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [lang, setLang] = useState("ua");
-  // const [themeLocal, setThemeLocal] = useState("light")
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -121,18 +121,20 @@ export default function Header() {
         {/* Desktop actions */}
         <div className="hidden md:flex items-center gap-3">
           <NavLinks links={navLinks} t={t} />
-          <button className="bg-[#133b88] hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
+          {/* <button className="bg-[#133b88] hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
             {t("header.btn")}
-          </button>
+          </button> */}
+          <Button variant="primary" children={t("header.btn")}/>
           <LangSwitch currentLang={lang} onChange={changeLang} />
           <ThemeSwitch theme={theme} onToggle={toggleTheme} />
         </div>
 
         {/* Mobile actions */}
         <div className="flex md:hidden items-center gap-3">
-          <button className="bg-[#133b88]  hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
+          {/* <button className="bg-[#133b88]  hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
             {t("header.btn")}
-          </button>
+          </button> */}
+                    <Button variant="primary" children={t("header.btn")} size="sm"/>
           <button
             className="p-2 text-gray-700 text-3xl"
             onClick={() => setMenuOpen(!menuOpen)}
