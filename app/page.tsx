@@ -19,11 +19,11 @@ function HeroSection(t: (key: string) => string) {
         />
       </div>
 
-      <div className="relative z-10 text-center px-6 sm:px-8 md:px-12 max-w-3xl">
+      <div className="relative z-10 text-center px-6 sm:px-8 md:px-12 max-w-2xl">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           {t("mainPage.title")}
         </h1>
-        <p className="text-base sm:text-lg md:text-xl mb-6">
+        <p className="text-base sm:text-lg md:text-xl mb-6 ">
           {t("mainPage.subtitle")}
         </p>
         <Link
@@ -134,30 +134,102 @@ function AboutAndWhySection(t: (key: string) => string) {
 
 function ServicesSection(t: (key: string) => string) {
   const items = [
-    { title: t("mainPage.servicesSoftTissuesTitle"), description: t("mainPage.servicesSoftTissuesDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesHeartTitle"), description: t("mainPage.servicesHeartDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesLiverElastographyTitle"), description: t("mainPage.servicesLiverElastographyDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesJointsTitle"), description: t("mainPage.servicesJointsDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesLimbVesselsTitle"), description: t("mainPage.servicesLimbVesselsDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesNeckHeadVesselsTitle"), description: t("mainPage.servicesNeckHeadVesselsDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesLymphNodesTitle"), description: t("mainPage.servicesLymphNodesDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesObGynTitle"), description: t("mainPage.servicesObGynDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesInternalOrgansTitle"), description: t("mainPage.servicesInternalOrgansDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesThyroidTitle"), description: t("mainPage.servicesThyroidDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesUrinaryTitle"), description: t("mainPage.servicesUrinaryDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
-    { title: t("mainPage.servicesBreastTitle"), description: t("mainPage.servicesBreastDescription"), imgUrl: "/imgs/icon_logomed-3_50.svg" },
+    {
+      title: t("mainPage.servicesSoftTissuesTitle"),
+      description: t("mainPage.servicesSoftTissuesDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 400,
+      waitTime: 29
+    },
+    {
+      title: t("mainPage.servicesHeartTitle"),
+      description: t("mainPage.servicesHeartDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 450,
+      waitTime: 15
+    },
+    {
+      title: t("mainPage.servicesLiverElastographyTitle"),
+      description: t("mainPage.servicesLiverElastographyDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 800,
+      waitTime: 10
+    },
+    {
+      title: t("mainPage.servicesJointsTitle"),
+      description: t("mainPage.servicesJointsDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 500,
+      waitTime: 15
+    },
+    {
+      title: t("mainPage.servicesLimbVesselsTitle"),
+      description: t("mainPage.servicesLimbVesselsDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 400 + 400,
+      waitTime: 15
+    },
+    {
+      title: t("mainPage.servicesNeckHeadVesselsTitle"),
+      description: t("mainPage.servicesNeckHeadVesselsDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 1000,
+      waitTime: 15
+    },
+    {
+      title: t("mainPage.servicesLymphNodesTitle"),
+      description: t("mainPage.servicesLymphNodesDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 400,
+      waitTime: 15
+    },
+    {
+      title: t("mainPage.servicesObGynTitle"),
+      description: t("mainPage.servicesObGynDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 3100,
+      waitTime: 60
+    },
+    {
+      title: t("mainPage.servicesInternalOrgansTitle"),
+      description: t("mainPage.servicesInternalOrgansDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 1500,
+      waitTime: 30
+    },
+    {
+      title: t("mainPage.servicesThyroidTitle"),
+      description: t("mainPage.servicesThyroidDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 400,
+      waitTime: 15
+    },
+    {
+      title: t("mainPage.servicesUrinaryTitle"),
+      description: t("mainPage.servicesUrinaryDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 1250,
+      waitTime: 45
+    },
+    {
+      title: t("mainPage.servicesBreastTitle"),
+      description: t("mainPage.servicesBreastDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 500,
+      waitTime: 15
+    },
   ];
 
   const [showAll, setShowAll] = useState(false);
-  const visibleItems = showAll ? items : items.slice(0, 8);
+  const visibleItems = showAll ? items : items.slice(0, 6);
 
   return (
     <section className="bg-[#edf5fd] dark:bg-gray-900  py-16 px-6 md:px-12 text-center">
       <h2 className="text-3xl font-bold mb-12 text-[#133b88]">{t("mainPage.ultrasoundServicesTitle")}</h2>
 
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-700 overflow-hidden`}
-        style={{ maxHeight: showAll ? `${items.length * 400}px` : "850px" }} // динамічно висота на мобілці
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 `}
+        style={{ maxHeight: showAll ? `${items.length * 400}px` : "850px" }}
       >
         {visibleItems.map((item, index) => (
           <div
@@ -169,6 +241,10 @@ function ServicesSection(t: (key: string) => string) {
             </div>
             <h3 className="text-lg dark:text-white font-semibold text-gray-800 mb-4">{item.title}</h3>
             <p className="text-gray-600 dark:text-white text-sm leading-relaxed">{item.description}</p>
+            <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
+              <span className="font-bold">💰 Ціна: <span className="font-medium text-gray-900 dark:text-white font-bold">{item.price} грн</span></span>
+              <span className="font-bold">⏱️ Очікування: <span className="font-medium text-gray-900 dark:text-white">{item.waitTime} хв</span></span>
+            </div>
           </div>
         ))}
       </div>
@@ -238,7 +314,7 @@ function TestimonialsSection(t: (key: string) => string) {
               key={index}
               className="relative bg-white dark:bg-[#133b88] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-1"
             >
-       
+
               <div className="absolute -top-4 left-6 text-5xl text-[#133b88]/20 select-none">
                 “
               </div>
