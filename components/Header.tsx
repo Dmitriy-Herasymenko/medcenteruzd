@@ -41,8 +41,6 @@ const LangSwitch = ({
   </div>
 );
 
-type Theme = 'light' | 'dark';
-
 
 const ThemeSwitch = ({
   theme,
@@ -128,12 +126,18 @@ export default function Header() {
           {/* <button className="bg-[#133b88] hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
             {t("header.btn")}
           </button> */}
-          <Button variant="primary" children={t("header.btn")} onClick={() => setIsModalOpen(true)} />
+          <Button
+            variant="primary"
+            size="sm"
+            onClick={() => setIsModalOpen(true)}
+          >
+            {t("header.btn")}
+          </Button>
           <LangSwitch currentLang={lang} onChange={changeLang} />
           <ThemeSwitch theme={theme} onToggle={toggleTheme} />
         </div>
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <AppointmentForm  onSuccess={() => setIsModalOpen(false)}/>
+          <AppointmentForm onSuccess={() => setIsModalOpen(false)} />
         </Modal>
 
         {/* Mobile actions */}
@@ -141,7 +145,13 @@ export default function Header() {
           {/* <button className="bg-[#133b88]  hover:bg-[#1b4cb0] rounded-full text-white text-sm px-5 py-2 font-medium shadow-sm transition cursor-pointer">
             {t("header.btn")}
           </button> */}
-          <Button variant="primary" children={t("header.btn")} size="sm" onClick={() => setIsModalOpen(true)} />
+          <Button
+            variant="primary"
+            size="sm"
+            onClick={() => setIsModalOpen(true)}
+          >
+            {t("header.btn")}
+          </Button>
           <button
             className="p-2 text-gray-700 text-3xl"
             onClick={() => setMenuOpen(!menuOpen)}
