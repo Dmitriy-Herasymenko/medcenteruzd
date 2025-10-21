@@ -31,7 +31,7 @@ const LangSwitch = ({
         key={l}
         onClick={() => onChange(l)}
         className={`w-7 h-7 flex items-center justify-center rounded-full text-[13px] font-medium transition cursor-pointer ${currentLang === l
-          ? "bg-[#133b88] text-white"
+          ? "bg-[#6F65EF] text-white"
           : "text-gray-600 hover:text-[#133b88]"
           }`}
       >
@@ -77,8 +77,8 @@ const NavLinks = ({
         href={link.href}
         onClick={onClick}
         className={`${vertical
-          ? "font-semibold text-gray-700 dark:text-[#fff] hover:text-[#133b88] text-center"
-          : "text-gray-700 dark:text-[#fff] text-sm font-semibold uppercase hover:text-[#133b88] transition-colors text-[14px]"
+          ? "font-semibold text-[#484848] dark:text-[#fff] hover:text-[#5e7ef2] text-center"
+          : "text-[#484848] dark:text-[#fff] text-[12px] font-semibold uppercase hover:text-[#5e7ef2] transition-colors text-[14px]"
           }`}
       >
         {t(link.key)}

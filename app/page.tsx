@@ -7,6 +7,9 @@ import SpecialistsSlider from "../components/SpecialistsSlider";
 import { useTranslation } from "react-i18next";
 import Modal from "@/components/Modal";
 import AppointmentForm from "@/components/AppointmentForm";
+import Button from "@/components/Button";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { SiViber } from "react-icons/si";
 
 function HeroSection(t: (key: string) => string, setIsModalOpen: (open: boolean) => void) {
   return (
@@ -83,12 +86,12 @@ function AboutAndWhySection(t: (key: string) => string) {
           </div>
 
           <div className="space-y-5  text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#133b88] ">
+            <h1 className="heading-h1 ">
               {t("mainPage.aboutUs")}
-            </h2>
-            <h3 className="text-xl md:text-2xl font-semibold">
+            </h1>
+            <h2 className="heading-h2">
               {t("mainPage.modernCenterTitle")}
-            </h3>
+            </h2>
             <p className="leading-relaxed ">
               {t("mainPage.centerDescription")}
             </p>
@@ -96,17 +99,17 @@ function AboutAndWhySection(t: (key: string) => string) {
               {t("mainPage.experiencedDoctors")}
             </p>
 
-            <button className="bg-[#133b88] hover:bg-[#1b4cb0] text-white px-8 py-3 font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+            <Button variant="primary" size="md">
               {t("mainPage.btnAboutUs")}
-            </button>
+            </Button>
           </div>
         </div>
 
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#133b88]">
+          <h2 className="heading-h1">
             {t("mainPage.whyChooseUs")}
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto">
+          <p className="heading-h3 max-w-[700px] mx-auto">
             {t("mainPage.whyChooseUsDescription")}
           </p>
         </div>
@@ -115,9 +118,9 @@ function AboutAndWhySection(t: (key: string) => string) {
           {items.map((item, i) => (
             <div
               key={i}
-              className="bg-white dark:bg-[#133b88] rounded-2xl shadow-md hover:shadow-xl p-6  text-center transition-all duration-300"
+              className="group bg-white hover:bg-[#635CDB] dark:bg-[#133b88] rounded-[5px] shadow-md hover:shadow-xl p-6  text-left transition-all duration-300"
             >
-              <div className="flex justify-center mb-4">
+              <div className="flex mb-4">
                 <Image
                   src={item.imgUrl}
                   alt={item.title}
@@ -126,10 +129,11 @@ function AboutAndWhySection(t: (key: string) => string) {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+              <h3 className="text-lg font-semibold text-[#484848] dark:text-white mb-2 
+                     group-hover:text-white">
                 {item.title}
               </h3>
-              <p className="text-gray-600 dark:text-white text-sm">{item.description}</p>
+              <p className="text-[#484848] dark:text-white/90 text-sm group-hover:text-white">{item.description}</p>
             </div>
           ))}
         </div>
@@ -231,38 +235,36 @@ function ServicesSection(t: (key: string) => string) {
 
   return (
     <section className="bg-[#edf5fd] dark:bg-gray-900  py-16 px-6 md:px-12 text-center">
-      <h2 className="text-3xl font-bold mb-12 text-[#133b88]">{t("mainPage.ultrasoundServicesTitle")}</h2>
+      <h2 className="heading-h1">{t("mainPage.ultrasoundServicesTitle")}</h2>
 
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 `}
-        style={{ maxHeight: showAll ? `${items.length * 400}px` : "850px" }}
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700  mt-8 overflow-hidden md:overflow-visible`}
+        style={{ maxHeight: showAll ? `${items.length * 400}px` : "970px " }}
       >
         {visibleItems.map((item, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-[#133b88] rounded-[20px] shadow-md p-6 flex flex-col relative overflow-hidden hover:shadow-lg transition-shadow"
+            className="group bg-white hover:bg-[#635CDB] dark:bg-[#133b88] rounded-[5px] shadow-md p-6 flex flex-col relative overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
           >
             <div className="flex justify-center mb-4">
               <Image src={item.imgUrl} alt={item.title} width={40} height={40} className="object-contain" />
             </div>
-            <h3 className="text-lg dark:text-white font-semibold text-gray-800 mb-4">{item.title}</h3>
-            <p className="text-gray-600 dark:text-white text-sm leading-relaxed">{item.description}</p>
+            <h3 className="text-lg dark:text-white font-semibold text-gray-800  group-hover:text-white mb-4">{item.title}</h3>
+            <p className="text-gray-600 dark:text-white text-sm leading-relaxed group-hover:text-white">{item.description}</p>
             <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
-              <span className="font-bold">💰 Ціна: <span className="font-medium text-gray-900 dark:text-white font-bold">{item.price} грн</span></span>
-              <span className="font-bold">⏱️ Очікування: <span className="font-medium text-gray-900 dark:text-white">{item.waitTime} хв</span></span>
+              <span className="font-bold group-hover:text-white">💰 Ціна: <span className="font-medium text-gray-900 dark:text-white font-bold group-hover:text-white group-hover:text-white">{item.price} грн</span></span>
+              <span className="font-bold group-hover:text-white">⏱️ Очікування: <span className="font-medium text-gray-900 dark:text-white group-hover:text-white">{item.waitTime} хв</span></span>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Кнопка “Показати ще / Згорнути” */}
       <div className="mt-10">
-        <button
+        <Button variant="primary" size="md"
           onClick={() => setShowAll(!showAll)}
-          className="bg-[#133b88] hover:bg-[#1b4cb0] text-white px-8 py-3 rounded-full shadow-md transition-all duration-300 font-semibold cursor-pointer"
         >
           {showAll ? t("mainPage.collapse") : t("mainPage.showMore")}
-        </button>
+        </Button>
       </div>
     </section>
   );
@@ -310,7 +312,7 @@ function TestimonialsSection(t: (key: string) => string) {
   return (
     <section className="px-6 md:px-12 py-16 bg-[#edf5fd] dark:bg-gray-900">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#133b88] mb-12">
+        <h2 className="heading-h1 mb-12">
           Відгуки наших пацієнтів
         </h2>
 
@@ -337,6 +339,188 @@ function TestimonialsSection(t: (key: string) => string) {
   );
 }
 
+function Contacts(t: (key: string) => string) {
+
+  return (
+    <>
+      <h2 className="heading-h1 text-center bg-[#edf5fd]">
+        Контакти
+      </h2>
+      <section id="contacts" className="px-6 md:px-12 py-16 bg-[#5375E0]">
+
+        <div className="container mx-auto px-4">
+
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className=" rounded-2xl  p-8">
+              <h3 className="text-2xl font-semibold mb-4 text-white">
+                Запис до лікаря
+              </h3>
+              <p className="text-white  mb-8">Після заповнення ми вам передзвоними</p>
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                  <div className="flex flex-col">
+                    <label className="text-white mb-2">Ім’я</label>
+                    <input
+                      type="text"
+                      placeholder="Ваше ім’я"
+                      required
+                      className="border-0 border-b-2 border-gray-300 focus:border-[#3eacf8] focus:outline-none py-2 text-white "
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label className="text-white  mb-2">Прізвище</label>
+                    <input
+                      type="text"
+                      placeholder="Ваше прізвище"
+                      required
+                      className="border-0 border-b-2 border-gray-300 focus:border-[#3eacf8] focus:outline-none py-2 text-white"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                  <div className="flex flex-col">
+                    <label className="text-white  mb-2">Е-пошта</label>
+                    <input
+                      type="email"
+                      placeholder="Введіть вашу е-пошту"
+                      required
+                      className="border-0 border-b-2 border-gray-300 focus:border-[#3eacf8] focus:outline-none py-2 text-white "
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <label className="text-white  mb-2">Телефон</label>
+                    <input
+                      type="tel"
+                      placeholder="+380(___)___-__-__"
+                      required
+                      className="border-0 border-b-2 border-gray-300 focus:border-[#3eacf8] focus:outline-none py-2 text-white "
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 dark:text-gray-300 mb-2 text-white">Повідомлення</label>
+                  <textarea
+                    rows={4}
+                    className="text-white w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3eacf8] "
+                    placeholder="Коротко опишіть, що вас цікавить"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-white hover:bg-[#6476f1] text-[#5397F4] font-semibold py-2 rounded-[5px] transition cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert("Ваше повідомлення успішно надіслано!");
+                  }}
+                >
+                  Надіслати
+                </button>
+              </form>
+            </div>
+
+
+            <div className=" p-8 flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-semibold mb-4 text-white">Зв’язатись з нами</h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 text-white">
+                  {/* Адреса */}
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">📍</span>
+                    <div>
+                      <p className="font-semibold">Адреса:</p>
+                      <p className="mt-1 text-gray-200">Україна, м.Умань вул.Шевченка 50</p>
+                    </div>
+                  </div>
+
+                  {/* Телефон */}
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">☎️</span>
+                    <div>
+                      <p className="font-semibold">Телефон:</p>
+                      <a
+                        href="tel:+380971234567"
+                        className="mt-1 block text-gray-200 hover:underline"
+                      >
+                        +38 067 493 51 04
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">✉️</span>
+                    <div>
+                      <p className="font-semibold">Email:</p>
+                      <a
+                        href="mailto:info@clinic.ua"
+                        className="mt-1 block text-gray-200 hover:underline"
+                      >
+                        medcenteruzd@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Графік роботи */}
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">🕒</span>
+                    <div>
+                      <p className="font-semibold">Графік роботи:</p>
+                      <p className="mt-1 text-gray-200 leading-relaxed">
+                        Пн–Пт: 08:00–19:00<br />
+                        Сб: 09:00–15:00<br />
+                        Нд: вихідний
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="px-8 flex flex-start gap-4 text-white ">
+                  <a
+                    href="https://www.facebook.com/igor.kobilak.2025"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-800 transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebookF size={20} />
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/dr.kobyliak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-800 transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram size={20} />
+                  </a>
+
+                  <a
+                    href="https://tinyurl.com/464btays"
+                    className="hover:text-gray-800 transition-colors"
+                    aria-label="Viber"
+                  >
+                    <SiViber size={20} />
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+
+
+  );
+}
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslation("common");
@@ -349,6 +533,7 @@ export default function Home() {
       {ServicesSection(t)}
       {SpecialistsSection(t, setIsModalOpen)}
       {TestimonialsSection(t)}
+      {Contacts(t)}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <AppointmentForm onSuccess={() => setIsModalOpen(false)} />
       </Modal>
