@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./../public/fonts/AvenirNextCyr/stylesheet.css";
 @custom-variant dark (&:where(.dark, .dark *));
 
 
@@ -12,21 +13,46 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fff;
+    --background: #F5F8FF;
     --foreground: #000;
   }
 }
 
 body {
-  @apply bg-white dark:bg-gray-900 text-gray-600 dark:text-white transition-colors;
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-[#F5F8FF] dark:bg-gray-900 text-["#484848"] dark:text-white transition-colors;
+  font-family: 'Avenir Next Cyr', sans-serif;
 }
 
 @keyframes slide-down {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-slide-down {
   animation: slide-down 0.2s ease-out;
+}
+
+@layer components {
+  .heading-h1 {
+    @apply text-3xl md:text-[55px] font-bold bg-gradient-to-r from-[#6476f1] to-[#3eacf8] bg-clip-text text-transparent uppercase;
+  }
+
+  .heading-h2 {
+    @apply text-[25px] font-bold text-[#484848] uppercase;
+  }
+
+   .heading-h3 {
+    @apply text-[16px] font-bold text-[#484848] uppercase;
+  }
+
+  .paragraph {
+    @apply text-[14px] text-[#484848] uppercase;
+  }
 }

@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import Button from "@/components/Button";
+
 
 interface AppointmentFormProps {
-  onSuccess: () => void; 
+  onSuccess: () => void;
 }
 
 export default function AppointmentForm({ onSuccess }: AppointmentFormProps) {
@@ -14,7 +16,7 @@ export default function AppointmentForm({ onSuccess }: AppointmentFormProps) {
     phone: "",
     message: "",
   });
- const { t } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -55,7 +57,7 @@ export default function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
       <div>
         <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
-            {t("modal.email")} *
+          {t("modal.email")} *
         </label>
         <input
           type="email"
@@ -70,7 +72,7 @@ export default function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
       <div>
         <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
-            {t("modal.phoneLabel")} *
+          {t("modal.phoneLabel")} *
         </label>
         <input
           type="tel"
@@ -85,7 +87,7 @@ export default function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
       <div>
         <label className="block text-sm font-semibold mb-1 dark:text-gray-200">
-            {t("modal.messageLabel")} 
+          {t("modal.messageLabel")}
         </label>
         <textarea
           name="message"
@@ -97,12 +99,9 @@ export default function AppointmentForm({ onSuccess }: AppointmentFormProps) {
         />
       </div>
 
-      <button
-        type="submit"
-        className="w-full bg-blue-900 text-white font-semibold py-2 rounded-lg transition cursor-pointer hover:bg-blue-700"
-      >
-        Надіслати
-      </button>
+      <Button  size="md">
+        {t("btn")}
+      </Button>
     </form>
   );
 }
