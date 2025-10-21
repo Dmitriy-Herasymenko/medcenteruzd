@@ -25,7 +25,7 @@ function HeroSection(t: (key: string) => string, setIsModalOpen: (open: boolean)
       </div>
 
       <div className="relative z-10 text-center px-6 sm:px-8 md:px-12 max-w-2xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           {t("mainPage.title")}
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-6 ">
@@ -253,7 +253,7 @@ function ServicesSection(t: (key: string) => string) {
             <p className="text-gray-600 dark:text-white text-sm leading-relaxed group-hover:text-white">{item.description}</p>
             <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
               <span className="font-bold group-hover:text-white">💰 Ціна: <span className="font-medium text-gray-900 dark:text-white font-bold group-hover:text-white group-hover:text-white">{item.price} грн</span></span>
-              <span className="font-bold group-hover:text-white">⏱️ Очікування: <span className="font-medium text-gray-900 dark:text-white group-hover:text-white">{item.waitTime} хв</span></span>
+              <span className="font-bold group-hover:text-white">⏱️ Тривалість обстеження: <span className="font-medium text-gray-900 dark:text-white group-hover:text-white">{item.waitTime} хв</span></span>
             </div>
           </div>
         ))}

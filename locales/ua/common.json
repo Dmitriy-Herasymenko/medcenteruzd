@@ -8,7 +8,7 @@
     "contactsLink": "Контакти"
   },
   "mainPage": {
-    "title": "УЗД діагностика в м. Умань",
+    "title": "УЗД діагностика м. Умань",
     "subtitle": "Точні результати, професійний підхід, комфортні умови",
     "btn": "Записатися на прийом",
     "aboutUs": "Про нас",
@@ -57,13 +57,13 @@
     "specialist1Name": "Кобиляк Ігор Анатолійович",
     "specialist1Specialization": "Лікар терапевт, лікар з ультразвукової діагностики",
     "specialist1Experience": "Лікар терапевт вищої категорії, лікар УЗД вищої категорії",
-    "specialist1PracticeSince": "1993",
+    "specialist1PracticeSince": "більше 30 років",
     "specialist1Email": "medcenteruzd@gmail.com",
     "specialist1Phone": "+38 067 493 51 04",
     "specialist2Name": "Кобиляк Олена Олексіївна",
     "specialist2Specialization": "Лікар ультразвукової діагностики",
     "specialist2Experience": "Лікар УЗД 1 категорії",
-    "specialist2PracticeSince": "2010",
+    "specialist2PracticeSince": "15 років",
     "specialist2Email": "Kobilyakelena@gmail.com",
     "specialist2Phone": "+38 067 123 45 67",
     "testimonial1Name": "Юлія",
@@ -88,7 +88,7 @@
     "footerServicesLink": "Послуги",
     "footerDoctorsLink": "Лікарі",
     "footerContactsLink": "Контакти",
-    "footerBlogLink": "Статі",
+    "footerBlogLink": "Статті",
     "footerSocialTitle": "Соціальні мережі"
   },
   "modal": {
