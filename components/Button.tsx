@@ -22,12 +22,12 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const baseStyles =
-    "cursor-pointer inline-flex items-center justify-center font-medium rounded-full transition duration-300 shadow-sm";
+    "cursor-pointer inline-flex items-center justify-center font-medium rounded-md transition duration-300 shadow-sm";
 
   let variantStyles = "";
   if (variant === "primary") {
     variantStyles =
-      "bg-[#133b88] hover:bg-[#1b4cb0] text-white";
+      "bg-[#6F65EF] hover:bg-[#5e7ef2] text-white";
   } else if (variant === "outline") {
     variantStyles =
       "border border-primary text-primary hover:bg-primary hover:text-white dark:border-blue-400 dark:text-blue-300 dark:hover:bg-blue-500 dark:hover:text-white";
@@ -40,6 +40,7 @@ export default function Button({
   if (size === "sm") sizeStyles = "px-3 py-1 text-sm";
   else if (size === "md") sizeStyles = "px-5 py-2 text-base";
   else if (size === "lg") sizeStyles = "px-7 py-3 text-lg";
+  else if (size === "full") sizeStyles = "px-2 py-2 text-base w-full";
 
   const classes = `${baseStyles} ${variantStyles} ${sizeStyles} ${className}`;
 
