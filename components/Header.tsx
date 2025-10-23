@@ -25,13 +25,13 @@ const LangSwitch = ({
   currentLang: string;
   onChange: (lang: string) => void;
 }) => (
-  <div className="flex items-center gap-1 border rounded-full bg-gray-50 hover:bg-gray-100 transition px-2 py-1 cursor-pointer">
+  <div className="flex  items-center gap-1 dark:bg-gray-900 border rounded-full bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-900 transition px-2 py-1 cursor-pointer">
     {["ua", "en"].map((l) => (
       <button
         key={l}
         onClick={() => onChange(l)}
         className={`w-7 h-7 flex items-center justify-center rounded-full text-[13px] font-medium transition cursor-pointer ${currentLang === l
-          ? "bg-[#6F65EF] text-white"
+          ? "bg-primary text-white"
           : "text-gray-600 hover:text-[#133b88]"
           }`}
       >
@@ -51,7 +51,7 @@ const ThemeSwitch = ({
 }) => (
   <button
     onClick={onToggle}
-    className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100 text-gray-700 transition cursor-pointer"
+    className="flex items-center  justify-center w-8 h-8 rounded-full hover:bg-gray-100 text-gray-700 transition cursor-pointer"
   >
     {theme === "light" ? <FaSun size={16} /> : <FaMoon size={16} />}
   </button>
