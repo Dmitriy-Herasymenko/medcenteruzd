@@ -46,7 +46,7 @@ export default function SpecialistsSlider({ slides, onClick }) {
                 priority
               />
               <div className="w-full text-center md:text-start md:w-1/2 space-y-4">
-                <h3 className="heading-h3 text-[#5397F4]">{s.name}</h3>
+                <h3 className="heading-h3 text-[#3257C8]">{s.name}</h3>
 
                 <p className="">
                   <span className="font-bold">Спеціальність:</span> {s.specialization}

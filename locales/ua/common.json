@@ -54,17 +54,17 @@
     "collapse": "Згорнути",
     "showMore": "Показати ще",
     "qualifiedSpecialistsTitle": "Кваліфіковані спеціалісти УЗД",
-    "specialist1Name": "Кобиляк Ігор Анатолійович",
+    "specialist1Name": "КОБИЛЯК Ігор Анатолійович",
     "specialist1Specialization": "Лікар терапевт, лікар з ультразвукової діагностики",
-    "specialist1Experience": "Лікар терапевт вищої категорії, лікар УЗД вищої категорії",
-    "specialist1PracticeSince": "більше 30 років",
+    "specialist1Experience": "Лікар-терапевт, сертифікований спеціаліст з УЗД.",
+    "specialist1PracticeSince": "Понад 30 років практичного досвіду у клінічний медицині і діагностиці захворювань внутрішніх органів, сечо-статевої системи, серцево-судинної системи, поверхневих структур , м'яких тканин.",
     "specialist1Email": "medcenteruzd@gmail.com",
     "specialist1Phone": "+38 067 493 51 04",
-    "specialist2Name": "Кобиляк Олена Олексіївна",
+    "specialist2Name": "КОБИЛЯК Олена Олексіївна",
     "specialist2Specialization": "Лікар ультразвукової діагностики",
-    "specialist2Experience": "Лікар УЗД 1 категорії",
-    "specialist2PracticeSince": "15 років",
-    "specialist2Email": "Kobilyakelena@gmail.com",
+    "specialist2Experience": "Сертифікований спеціаліст з УЗД.",
+    "specialist2PracticeSince": "Понад 15 років практичного стажу в діагностиці захворювань серцево-судинної системи, внутрішніх органів, сечо-статевої системи, поверхневих структур, м'яких тканин у дорослих та дітей.",
+    "specialist2Email": "medcenteruzd@gmail.com",
     "specialist2Phone": "+38 067 123 45 67",
     "testimonial1Name": "Юлія",
     "testimonial1Feedback": "Безмежно вдячна за тепле ставлення та професіоналізм.",
@@ -103,5 +103,5 @@
     "messagePlaceholder": "Введіть ваше повідомлення",
     "submitBtn": "Надіслати"
   },
-  "btn": "Записатися"
+  "btn": "Записатись"
 }

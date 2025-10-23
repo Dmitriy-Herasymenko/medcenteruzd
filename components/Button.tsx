@@ -27,7 +27,7 @@ export default function Button({
   let variantStyles = "";
   if (variant === "primary") {
     variantStyles =
-      "bg-[#6F65EF] hover:bg-[#5e7ef2] text-white";
+      "bg-primary hover:bg-[#126fe6] text-white";
   } else if (variant === "outline") {
     variantStyles =
       "border border-primary text-primary hover:bg-primary hover:text-white dark:border-blue-400 dark:text-blue-300 dark:hover:bg-blue-500 dark:hover:text-white";

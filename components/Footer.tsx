@@ -30,6 +30,7 @@ export default function Footer() {
           <p className=" mt-1 text-center md:text-left">
             {t("footer.footerEmail")} <a href="mailto:medcenteruzd@gmail.com" className="hover:underline">medcenteruzd@gmail.com</a>
           </p>
+
         </div>
 
         <div className="text-center md:text-left">

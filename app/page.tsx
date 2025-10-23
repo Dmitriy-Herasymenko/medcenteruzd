@@ -118,7 +118,7 @@ function AboutAndWhySection(t: (key: string) => string) {
           {items.map((item, i) => (
             <div
               key={i}
-              className="group bg-white hover:bg-[#635CDB] dark:bg-[#133b88] rounded-[5px] shadow-md hover:shadow-xl p-6  text-left transition-all duration-300"
+              className="group bg-white hover:bg-[#133b88] dark:bg-[#133b88] rounded-[5px] shadow-md hover:shadow-xl p-6  text-left transition-all duration-300"
             >
               <div className="flex mb-4">
                 <Image
@@ -244,7 +244,7 @@ function ServicesSection(t: (key: string) => string) {
         {visibleItems.map((item, index) => (
           <div
             key={index}
-            className="group bg-white hover:bg-[#635CDB] dark:bg-[#133b88] rounded-[5px] shadow-md p-6 flex flex-col relative overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+            className="group bg-white hover:bg-[#133b88] dark:bg-[#133b88] rounded-[5px] shadow-md p-6 flex flex-col relative overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
           >
             <div className="flex justify-center mb-4">
               <Image src={item.imgUrl} alt={item.title} width={40} height={40} className="object-contain" />
@@ -346,7 +346,7 @@ function Contacts(t: (key: string) => string) {
       <h2 className="heading-h1 text-center bg-[#edf5fd]">
         Контакти
       </h2>
-      <section id="contacts" className="px-6 md:px-12 py-16 bg-[#5375E0]">
+      <section id="contacts" className="px-6 md:px-12 py-16 bg-primary m-0">
 
         <div className="container mx-auto px-4">
 
@@ -435,6 +435,7 @@ function Contacts(t: (key: string) => string) {
                     <div>
                       <p className="font-semibold">Адреса:</p>
                       <p className="mt-1 text-gray-200">Україна, м.Умань вул.Шевченка 50</p>
+
                     </div>
                   </div>
 
@@ -534,6 +535,17 @@ export default function Home() {
       {SpecialistsSection(t, setIsModalOpen)}
       {TestimonialsSection(t)}
       {Contacts(t)}
+      <div className=" w-full h-100">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.175419929347!2d30.21890107592255!3d48.75944627131889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d20da8953e6589%3A0x22e976b0eac83120!2z0JrQsNCx0ZbQvdC10YIg0KPQl9CUINCa0L7QsdC40LvRj9C60LA!5e0!3m2!1suk!2sua!4v1761223967521!5m2!1suk!2sua"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <AppointmentForm onSuccess={() => setIsModalOpen(false)} />
       </Modal>

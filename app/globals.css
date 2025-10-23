@@ -41,7 +41,7 @@ body {
 
 @layer components {
   .heading-h1 {
-    @apply text-3xl md:text-[55px] font-bold bg-gradient-to-r from-[#6476f1] to-[#3eacf8] bg-clip-text text-transparent uppercase;
+    @apply text-3xl md:text-[55px] font-bold bg-gradient-to-r from-[#133b88] to-[#3257C8]  bg-clip-text text-transparent uppercase;
   }
 
   .heading-h2 {
@@ -55,4 +55,14 @@ body {
   .paragraph {
     @apply text-[14px] text-[#484848] uppercase;
   }
+}
+
+@layer utilities {
+  .bg-primary {
+    @apply bg-[#133b88];
+  }
+  .bg-secondary {
+    @apply bg-[#126fe6];
+  }
+
 }
