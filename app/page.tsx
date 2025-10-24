@@ -288,9 +288,9 @@ function ServicesSection(t: (key: string) => string) {
           {showAll ? t("mainPage.collapse") : t("mainPage.showMore")}
         </Button> */}
 
-            <Button variant="primary" size="md">
+            <Link href="/price"  className="bg-primary hover:bg-[#126fe6] text-whitebg-primary hover:bg-[#126fe6] text-white cursor-pointer inline-flex items-center justify-center font-medium rounded-md transition duration-300 shadow-sm px-5 py-2 text-base">
           {t("mainPage.allservices")}
-        </Button>
+        </Link>
       </div>
     </section>
   );
