@@ -5,7 +5,9 @@
     "servicesLink": "Ultrasound Services",
     "doctorsLink": "Doctors",
     "priceLink": "Price List",
-    "contactsLink": "Contacts"
+    "contactsLink": "Contacts",
+    "clinic": "Clinic",
+    "customer": "Ihor Kobyliak"
   },
   "mainPage": {
     "title": "Ultrasound Diagnostics Uman",
@@ -27,6 +29,8 @@
     "comfortableConditionsTitle": "Comfortable Conditions",
     "comfortableConditionsDescription": "We create a pleasant atmosphere so that the procedure is calm and stress-free.",
     "ultrasoundServicesTitle": "Ultrasound Services",
+    "servicesAbdominalUltrasoundTitle": "Abdominal and Urinary System Ultrasound",
+    "servicesAbdominalUltrasoundDescription": "Ultrasound examination (US) of internal organs is a safe, painless...",
     "servicesSoftTissuesTitle": "Soft Tissue Ultrasound",
     "servicesSoftTissuesDescription": "Safe, painless examination of soft tissues.",
     "servicesHeartTitle": "Heart Ultrasound",
@@ -35,7 +39,8 @@
     "servicesLiverElastographyDescription": "Non-invasive assessment of liver tissue.",
     "servicesJointsTitle": "Joint Ultrasound",
     "servicesJointsDescription": "Diagnosis of musculoskeletal system disorders.",
-    "servicesLimbVesselsTitle": "Limb Vessel Ultrasound",
+    "serviceslowerLimbVeinUltrasoundTitle": "Lower Limb Vein Ultrasound",
+    "serviceslowerLimbVeinUltrasoundDescription": "Ultrasound examination of the veins of the lower limbs is a safe, painless, and highly informative diagnostic method.",
     "servicesLimbVesselsDescription": "Examination of blood flow in veins and arteries of the limbs.",
     "servicesNeckHeadVesselsTitle": "Neck and Head Vessel Ultrasound",
     "servicesNeckHeadVesselsDescription": "Checking the blood supply to the brain and arteries.",
@@ -53,6 +58,7 @@
     "servicesBreastDescription": "Preventive examination for women of all ages.",
     "collapse": "Collapse",
     "showMore": "Show More",
+    "allservices": "All Services",
     "qualifiedSpecialistsTitle": "Qualified Ultrasound Specialists",
     "specialist1Name": "Kobyliak Ihor Anatoliyovych",
     "specialist1Specialization": "Therapist, Ultrasound Diagnostics Doctor",
@@ -65,7 +71,7 @@
     "specialist2Experience": "1st Category Ultrasound Doctor",
     "specialist2PracticeSince": "15 years",
     "specialist2Email": "medcenteruzd@gmail.com",
-    "specialist2Phone": "+38 067 123 45 67",
+    "specialist2Phone": "+38 098 439 89 48",
     "testimonial1Name": "Yulia",
     "testimonial1Feedback": "Extremely grateful for the warm attitude and professionalism.",
     "testimonial2Name": "Vasyl",
@@ -92,16 +98,168 @@
     "footerSocialTitle": "Social Media"
   },
   "modal": {
-  "title": "Appointment Request",
-  "nameLabel": "Name",
-  "namePlaceholder": "Enter your name",
-  "phoneLabel": "Phone",
-  "phonePlaceholder": "Enter your phone number",
-  "email": "Email",
-  "emailPlaceholder": "Enter your email",
-  "messageLabel": "Message",
-  "messagePlaceholder": "Enter your message",
-  "submitBtn": "Send"
-},
+    "title": "Appointment Request",
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your name",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "Enter your phone number",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Enter your message",
+    "submitBtn": "Send"
+  },
+  "pricePage": {
+    "1": {
+      "title": "Soft Tissue Ultrasound",
+      "shortDescription": "Ultrasound examination (US) of soft tissues",
+      "description": "Ultrasound examination of soft tissues is a safe, painless, and highly informative diagnostic method that allows assessing the condition of muscles, tendons, fat tissue, lymph nodes, and other soft tissues of the body."
+    },
+    "2": {
+      "title": "Heart Ultrasound. Echocardiography",
+      "shortDescription": "Ultrasound examination of the heart (echocardiography)",
+      "description": "Echocardiography is a non-invasive diagnostic method that provides detailed information about the structure and function of the heart. Using high-frequency sound waves, the doctor can assess heart size, wall thickness, valve mobility, large vessels, and blood flow."
+    },
+    "3": {
+      "title": "Liver Elastography",
+      "shortDescription": "Liver elastography",
+      "description": "Liver elastography is a modern ultrasound method that evaluates liver tissue stiffness. The stiffer the liver, the higher the degree of fibrosis, which may indicate cirrhosis or other liver diseases."
+    },
+    "4": {
+      "title": "Liver Elastography + Abdominal Ultrasound",
+      "shortDescription": "Liver elastography and abdominal organs ultrasound",
+      "description": "Liver elastography and abdominal ultrasound are two powerful tools often used together for a comprehensive assessment of the liver and other abdominal organs."
+    },
+    "5": {
+      "title": "Joint Ultrasound",
+      "shortDescription": "Ultrasound of lower limb joints",
+      "description": "Lower limb joint ultrasound is a procedure for diagnosing ankle, knee, and hip joints at any age. It helps detect joint, tendon, and ligament disorders and clarify previous diagnoses."
+    },
+    "6": {
+      "title": "Lower Limb Vein Ultrasound",
+      "shortDescription": "Ultrasound of lower limb veins",
+      "description": "Ultrasound of lower limb veins is a safe and painless method that evaluates the venous system, identifies causes of swelling, pain, varicose veins, and other issues."
+    },
+    "7": {
+      "title": "Lower Limb Artery Ultrasound",
+      "shortDescription": "Ultrasound of lower limb arteries",
+      "description": "Ultrasound of lower limb arteries evaluates artery condition, blood flow velocity, narrowing, blockages, aneurysms, and other pathologies."
+    },
+    "8": {
+      "title": "Lower Limb Vein and Artery Ultrasound",
+      "shortDescription": "Ultrasound of veins and arteries in lower limbs",
+      "description": "Ultrasound of lower limb veins and arteries is one of the most informative and safe methods for diagnosing vascular diseases of the legs."
+    },
+    "9": {
+      "title": "Upper Limb Artery Ultrasound",
+      "shortDescription": "Ultrasound of upper limb arteries",
+      "description": "Ultrasound of upper limb arteries allows assessment of blood vessels in the arms, detecting narrowing, blockages, aneurysms, and other pathologies."
+    },
+    "10": {
+      "title": "Upper Limb Vein Ultrasound",
+      "shortDescription": "Ultrasound of upper limb veins",
+      "description": "Ultrasound of upper limb veins is a safe method for evaluating the venous system of the arms."
+    },
+    "11": {
+      "title": "Upper Limb Artery and Vein Ultrasound",
+      "shortDescription": "Ultrasound of upper limb arteries and veins",
+      "description": "Ultrasound of upper limb arteries and veins is a non-invasive method to assess blood vessels and detect abnormalities."
+    },
+    "12": {
+      "title": "Neck Vessel Ultrasound",
+      "shortDescription": "Ultrasound of the neck",
+      "description": "Neck ultrasound is a safe method for evaluating soft tissues, lymph nodes, thyroid gland, salivary glands, and blood vessels."
+    },
+    "13": {
+      "title": "Neck and Head Vessel Ultrasound",
+      "shortDescription": "Ultrasound of neck and head vessels",
+      "description": "Ultrasound of neck and head vessels allows evaluation of arteries and veins supplying the brain and detecting vascular pathologies."
+    },
+    "14": {
+      "title": "Lymph Node Ultrasound",
+      "shortDescription": "Ultrasound of lymph nodes",
+      "description": "Ultrasound of lymph nodes helps assess the lymphatic system, detect enlargement, inflammation, or tumors."
+    },
+    "15": {
+      "title": "Pelvic Ultrasound in Women",
+      "shortDescription": "Ultrasound of pelvic organs",
+      "description": "Pelvic ultrasound evaluates the uterus, ovaries, fallopian tubes, and other organs without surgical intervention."
+    },
+    "16": {
+      "title": "Uterus and Ovary Ultrasound",
+      "shortDescription": "Ultrasound of the uterus and ovaries",
+      "description": "Ultrasound of the uterus and ovaries is a safe diagnostic method for female reproductive organs."
+    },
+    "17": {
+      "title": "First Trimester Pregnancy Ultrasound",
+      "shortDescription": "Ultrasound in the first trimester of pregnancy",
+      "description": "First trimester ultrasound allows evaluation of early fetal development, confirms pregnancy, and detects possible pathologies."
+    },
+    "18": {
+      "title": "Second Trimester Pregnancy Ultrasound",
+      "shortDescription": "Ultrasound in the second trimester of pregnancy",
+      "description": "Second trimester ultrasound assesses fetal development and pregnancy progress, typically performed between 18-22 weeks."
+    },
+    "19": {
+      "title": "Third Trimester Pregnancy Ultrasound",
+      "shortDescription": "Ultrasound in the third trimester of pregnancy",
+      "description": "Third trimester ultrasound evaluates fetal development before birth and identifies potential complications."
+    },
+    "20": {
+      "title": "Abdominal and Urinary System Ultrasound",
+      "shortDescription": "Ultrasound of abdominal organs and urinary system",
+      "description": "Evaluation of liver, gallbladder, kidneys, bladder, and prostate. One of the most common and informative diagnostic methods."
+    },
+    "21": {
+      "title": "Abdominal Ultrasound",
+      "shortDescription": "Ultrasound of abdominal organs",
+      "description": "Includes liver, intrahepatic bile ducts, gallbladder, pancreas, and spleen."
+    },
+    "22": {
+      "title": "Abdominal and Kidney Ultrasound",
+      "shortDescription": "Ultrasound of abdominal organs and kidneys",
+      "description": "Ultrasound evaluates organ size, shape, structure, detects pathological changes, and aids diagnosis or further examination."
+    },
+    "23": {
+      "title": "Thyroid Ultrasound",
+      "shortDescription": "Ultrasound of the thyroid gland",
+      "description": "Thyroid ultrasound is a safe and painless method that provides detailed imaging of the gland to detect early-stage diseases."
+    },
+    "24": {
+      "title": "Scrotum (Testes) Ultrasound",
+      "shortDescription": "Ultrasound of scrotal organs",
+      "description": "Scrotal ultrasound is a safe method to assess testes, epididymis, and other scrotal structures, widely used in urology."
+    },
+    "25": {
+      "title": "Urinary System Ultrasound. Kidneys, Bladder",
+      "shortDescription": "Ultrasound of the urinary system",
+      "description": "Urinary system ultrasound is a safe and informative method to evaluate kidneys, ureters, and bladder."
+    },
+    "26": {
+      "title": "Urinary System Ultrasound with Residual Urine Measurement",
+      "shortDescription": "Ultrasound of urinary system with residual urine assessment",
+      "description": "Ultrasound of kidneys, bladder, and prostate with residual urine measurement is a safe method to assess male urinary system health."
+    },
+    "27": {
+      "title": "Breast Ultrasound",
+      "shortDescription": "Ultrasound of the breasts",
+      "description": "Breast ultrasound is a safe and painless method that provides detailed imaging of breast tissue and detects pathologies at early stages."
+    },
+    "28": {
+      "title": "Breast Ultrasound + Elastography",
+      "shortDescription": "Breast ultrasound with elastography",
+      "description": "Breast ultrasound with elastography is a modern diagnostic method that evaluates tissue stiffness and provides more detailed information than standard ultrasound."
+    },
+    "title": "Our Services and Prices",
+    "min": "min",
+    "uah": "UAH",
+    "price": "Price",
+    "duration": "Duration",
+    "service": "Service",
+    "description": "Description",
+    "doctors": "Doctors",
+    "doctorIgor": "Kobyliak, Igor Anatoliyovych",
+    "doctorOlena": "Kobyliak, Olena Oleksiivna"
+  },
   "btn": "Sign up"
 }

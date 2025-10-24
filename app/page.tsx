@@ -144,18 +144,25 @@ function AboutAndWhySection(t: (key: string) => string) {
 
 function ServicesSection(t: (key: string) => string) {
   const items = [
-    {
-      title: t("mainPage.servicesSoftTissuesTitle"),
-      description: t("mainPage.servicesSoftTissuesDescription"),
+     {
+      title: t("mainPage.servicesAbdominalUltrasoundTitle"),
+      description: t("mainPage.servicesAbdominalUltrasoundDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 400,
-      waitTime: 29
+      price: 600,
+      waitTime: 15
     },
     {
       title: t("mainPage.servicesHeartTitle"),
       description: t("mainPage.servicesHeartDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
       price: 450,
+      waitTime: 15
+    },
+    {
+      title: t("mainPage.servicesThyroidTitle"),
+      description: t("mainPage.servicesThyroidDescription"),
+      imgUrl: "/imgs/icon_logomed-3_50.svg",
+      price: 400,
       waitTime: 15
     },
     {
@@ -166,26 +173,27 @@ function ServicesSection(t: (key: string) => string) {
       waitTime: 10
     },
     {
-      title: t("mainPage.servicesJointsTitle"),
-      description: t("mainPage.servicesJointsDescription"),
+      title: t("mainPage.servicesBreastTitle"),
+      description: t("mainPage.servicesBreastDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
       price: 500,
       waitTime: 15
     },
-    {
-      title: t("mainPage.servicesLimbVesselsTitle"),
-      description: t("mainPage.servicesLimbVesselsDescription"),
+      {
+      title: t("mainPage.serviceslowerLimbVeinUltrasoundTitle"),
+      description: t("mainPage.serviceslowerLimbVeinUltrasoundDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 400 + 400,
-      waitTime: 15
+      price: 700,
+      waitTime: 29
     },
-    {
+       {
       title: t("mainPage.servicesNeckHeadVesselsTitle"),
       description: t("mainPage.servicesNeckHeadVesselsDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
       price: 1000,
       waitTime: 15
     },
+     
     {
       title: t("mainPage.servicesLymphNodesTitle"),
       description: t("mainPage.servicesLymphNodesDescription"),
@@ -193,44 +201,58 @@ function ServicesSection(t: (key: string) => string) {
       price: 400,
       waitTime: 15
     },
-    {
-      title: t("mainPage.servicesObGynTitle"),
-      description: t("mainPage.servicesObGynDescription"),
-      imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 3100,
-      waitTime: 60
-    },
-    {
-      title: t("mainPage.servicesInternalOrgansTitle"),
-      description: t("mainPage.servicesInternalOrgansDescription"),
-      imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 1500,
-      waitTime: 30
-    },
-    {
-      title: t("mainPage.servicesThyroidTitle"),
-      description: t("mainPage.servicesThyroidDescription"),
-      imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 400,
-      waitTime: 15
-    },
-    {
+   {
       title: t("mainPage.servicesUrinaryTitle"),
       description: t("mainPage.servicesUrinaryDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
       price: 1250,
       waitTime: 45
     },
-    {
-      title: t("mainPage.servicesBreastTitle"),
-      description: t("mainPage.servicesBreastDescription"),
-      imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 500,
-      waitTime: 15
-    },
+
+    // {
+    //   title: t("mainPage.servicesSoftTissuesTitle"),
+    //   description: t("mainPage.servicesSoftTissuesDescription"),
+    //   imgUrl: "/imgs/icon_logomed-3_50.svg",
+    //   price: 400,
+    //   waitTime: 29
+    // },
+
+
+    // {
+    //   title: t("mainPage.servicesJointsTitle"),
+    //   description: t("mainPage.servicesJointsDescription"),
+    //   imgUrl: "/imgs/icon_logomed-3_50.svg",
+    //   price: 500,
+    //   waitTime: 15
+    // },
+    // {
+    //   title: t("mainPage.servicesLimbVesselsTitle"),
+    //   description: t("mainPage.servicesLimbVesselsDescription"),
+    //   imgUrl: "/imgs/icon_logomed-3_50.svg",
+    //   price: 400 + 400,
+    //   waitTime: 15
+    // },
+
+    // {
+    //   title: t("mainPage.servicesObGynTitle"),
+    //   description: t("mainPage.servicesObGynDescription"),
+    //   imgUrl: "/imgs/icon_logomed-3_50.svg",
+    //   price: 3100,
+    //   waitTime: 60
+    // },
+    // {
+    //   title: t("mainPage.servicesInternalOrgansTitle"),
+    //   description: t("mainPage.servicesInternalOrgansDescription"),
+    //   imgUrl: "/imgs/icon_logomed-3_50.svg",
+    //   price: 1500,
+    //   waitTime: 30
+    // },
+
+ 
+
   ];
 
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const visibleItems = showAll ? items : items.slice(0, 6);
 
   return (
@@ -260,10 +282,14 @@ function ServicesSection(t: (key: string) => string) {
       </div>
 
       <div className="mt-10">
-        <Button variant="primary" size="md"
+        {/* <Button variant="primary" size="md"
           onClick={() => setShowAll(!showAll)}
         >
           {showAll ? t("mainPage.collapse") : t("mainPage.showMore")}
+        </Button> */}
+
+            <Button variant="primary" size="md">
+          {t("mainPage.allservices")}
         </Button>
       </div>
     </section>

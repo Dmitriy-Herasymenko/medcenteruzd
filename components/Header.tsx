@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Button from "@/components/Button";
 import Modal from "@/components/Modal";
 import AppointmentForm from "@/components/AppointmentForm";
+
 
 const navLinks = [
   { href: "/", key: "header.mainLink" },
@@ -63,29 +65,37 @@ const NavLinks = ({
   onClick,
   vertical = false,
 }: {
-  links: typeof navLinks;
+  links: { href: string; key: string }[];
   t: (key: string) => string;
   onClick?: () => void;
   vertical?: boolean;
-}) => (
-  <nav
-    className={`${vertical ? "flex flex-col space-y-3" : "flex items-center gap-4"}`}
-  >
-    {links.map((link) => (
-      <Link
-        key={link.href}
-        href={link.href}
-        onClick={onClick}
-        className={`${vertical
-          ? "font-semibold text-[#484848] dark:text-[#fff] hover:text-[#5e7ef2] text-center"
-          : "text-[#484848] dark:text-[#fff] text-[12px] font-semibold uppercase hover:text-[#5e7ef2] transition-colors text-[14px]"
-          }`}
-      >
-        {t(link.key)}
-      </Link>
-    ))}
-  </nav>
-);
+}) => {
+  const pathname = usePathname(); 
+  return (
+    <nav className={`${vertical ? "flex flex-col space-y-3" : "flex items-center gap-4"}`}>
+      {links.map((link) => {
+        const isActive = pathname === link.href;
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={onClick}
+            className={`${vertical
+              ? `font-semibold text-center ${
+                  isActive ? "text-[#0156A0]" : "text-[#484848] dark:text-[#fff]"
+                } hover:text-[#0156A0]`
+              : `text-[14px] font-semibold uppercase transition-colors ${
+                  isActive ? "text-[#0156A0]" : "text-[#484848] dark:text-[#fff]"
+                } hover:text-[#0156A0]`
+            }`}
+          >
+            {t(link.key)}
+          </Link>
+        );
+      })}
+    </nav>
+  );
+};
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -117,7 +127,12 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
 
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/imgs/logo.png" alt="Медцентр УЗД" width={120} height={50} />
+          <Image src="/imgs/logo.png" alt="Медцентр УЗД" width={40} height={30} />
+          <div className="flex flex-col uppercase leading-none">
+            <span className="text-[12px] md:text-l font-bold text-[#0156A0]">{t("header.clinic")}</span>
+            <span className="text-[12px] md:text-l font-bold text-[#0156A0]">{t("header.customer")}</span>
+          </div>
+
         </Link>
 
         {/* Desktop actions */}
