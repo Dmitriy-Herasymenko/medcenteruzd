@@ -554,7 +554,6 @@ export default function Home() {
 
   return (
     <div className="space-y-16">
-
       {HeroSection(t, setIsModalOpen)}
       {AboutAndWhySection(t)}
       {ServicesSection(t)}

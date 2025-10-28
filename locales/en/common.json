@@ -111,146 +111,131 @@
   },
   "pricePage": {
     "1": {
-      "title": "Soft Tissue Ultrasound",
-      "shortDescription": "Ultrasound examination (US) of soft tissues",
-      "description": "Ultrasound examination of soft tissues is a safe, painless, and highly informative diagnostic method that allows assessing the condition of muscles, tendons, fat tissue, lymph nodes, and other soft tissues of the body."
+      "title": "“Women's” check-up – ultrasound of the abdominal organs and kidneys + thyroid gland + mammary glands",
+      "shortDescription": "“Women's” check-up – ultrasound of the abdominal organs and kidneys + thyroid gland + mammary glands",
+      "description": "“Women's” check-up – ultrasound of the abdominal organs and kidneys + thyroid gland + mammary glands"
     },
     "2": {
-      "title": "Heart Ultrasound. Echocardiography",
-      "shortDescription": "Ultrasound examination of the heart (echocardiography)",
-      "description": "Echocardiography is a non-invasive diagnostic method that provides detailed information about the structure and function of the heart. Using high-frequency sound waves, the doctor can assess heart size, wall thickness, valve mobility, large vessels, and blood flow."
+      "title": "Complex of examinations “Male” (check-up) – ultrasound of the abdominal organs and kidneys + prostate gland + thyroid gland + heart",
+      "shortDescription": "Complex of examinations “Male” (check-up) – ultrasound of the abdominal organs and kidneys + prostate gland + thyroid gland + heart",
+      "description": "Complex of examinations “Male” (check-up) – ultrasound of the abdominal organs and kidneys + prostate gland + thyroid gland + heart"
     },
     "3": {
-      "title": "Liver Elastography",
-      "shortDescription": "Liver elastography",
-      "description": "Liver elastography is a modern ultrasound method that evaluates liver tissue stiffness. The stiffer the liver, the higher the degree of fibrosis, which may indicate cirrhosis or other liver diseases."
+      "title": "Abdominal organs (liver, intrahepatic bile ducts, gallbladder, bile ducts, pancreas, spleen)",
+      "shortDescription": "Abdominal organs (liver, intrahepatic bile ducts, gallbladder, bile ducts, pancreas, spleen)",
+      "description": "Abdominal organs (liver, intrahepatic bile ducts, gallbladder, bile ducts, pancreas, spleen)"
     },
     "4": {
-      "title": "Liver Elastography + Abdominal Ultrasound",
-      "shortDescription": "Liver elastography and abdominal organs ultrasound",
-      "description": "Liver elastography and abdominal ultrasound are two powerful tools often used together for a comprehensive assessment of the liver and other abdominal organs."
+      "title": "Abdominal organs + kidneys",
+      "shortDescription": "Abdominal organs + kidneys",
+      "description": "Abdominal organs + kidneys"
     },
     "5": {
-      "title": "Joint Ultrasound",
-      "shortDescription": "Ultrasound of lower limb joints",
-      "description": "Lower limb joint ultrasound is a procedure for diagnosing ankle, knee, and hip joints at any age. It helps detect joint, tendon, and ligament disorders and clarify previous diagnoses."
+      "title": "Abdominal organs + kidneys + bladder + prostate gland",
+      "shortDescription": "Abdominal organs + kidneys + bladder + prostate gland",
+      "description": "Abdominal organs + kidneys + bladder + prostate gland"
     },
     "6": {
-      "title": "Lower Limb Vein Ultrasound",
-      "shortDescription": "Ultrasound of lower limb veins",
-      "description": "Ultrasound of lower limb veins is a safe and painless method that evaluates the venous system, identifies causes of swelling, pain, varicose veins, and other issues."
+      "title": "Kidneys + bladder",
+      "shortDescription": "Kidneys + bladder",
+      "description": "Kidneys + bladder"
     },
     "7": {
-      "title": "Lower Limb Artery Ultrasound",
-      "shortDescription": "Ultrasound of lower limb arteries",
-      "description": "Ultrasound of lower limb arteries evaluates artery condition, blood flow velocity, narrowing, blockages, aneurysms, and other pathologies."
+      "title": "Kidneys + bladder + prostate with determination of residual urine volume",
+      "shortDescription": "Kidneys + bladder + prostate with determination of residual urine volume",
+      "description": "Kidneys + bladder + prostate with determination of residual urine volume"
     },
     "8": {
-      "title": "Lower Limb Vein and Artery Ultrasound",
-      "shortDescription": "Ultrasound of veins and arteries in lower limbs",
-      "description": "Ultrasound of lower limb veins and arteries is one of the most informative and safe methods for diagnosing vascular diseases of the legs."
+      "title": "Thyroid",
+      "shortDescription": "Thyroid",
+      "description": "Thyroid"
     },
     "9": {
-      "title": "Upper Limb Artery Ultrasound",
-      "shortDescription": "Ultrasound of upper limb arteries",
-      "description": "Ultrasound of upper limb arteries allows assessment of blood vessels in the arms, detecting narrowing, blockages, aneurysms, and other pathologies."
+      "title": "Heart",
+      "shortDescription": "Heart",
+      "description": "Heart"
     },
     "10": {
-      "title": "Upper Limb Vein Ultrasound",
-      "shortDescription": "Ultrasound of upper limb veins",
-      "description": "Ultrasound of upper limb veins is a safe method for evaluating the venous system of the arms."
+      "title": "Female pelvic organs (uterus and appendages)",
+      "shortDescription": "Female pelvic organs (uterus and appendages)",
+      "description": "Female pelvic organs (uterus and appendages)."
     },
     "11": {
-      "title": "Upper Limb Artery and Vein Ultrasound",
-      "shortDescription": "Ultrasound of upper limb arteries and veins",
-      "description": "Ultrasound of upper limb arteries and veins is a non-invasive method to assess blood vessels and detect abnormalities."
+      "title": "Mammary glands",
+      "shortDescription": "Mammary glands",
+      "description": "Mammary glands"
     },
     "12": {
-      "title": "Neck Vessel Ultrasound",
-      "shortDescription": "Ultrasound of the neck",
-      "description": "Neck ultrasound is a safe method for evaluating soft tissues, lymph nodes, thyroid gland, salivary glands, and blood vessels."
+      "title": "Gate",
+      "shortDescription": "Gate",
+      "description": "Gate"
     },
     "13": {
-      "title": "Neck and Head Vessel Ultrasound",
-      "shortDescription": "Ultrasound of neck and head vessels",
-      "description": "Ultrasound of neck and head vessels allows evaluation of arteries and veins supplying the brain and detecting vascular pathologies."
+      "title": "Liver elastography",
+      "shortDescription": "Liver elastography",
+      "description": "Liver elastography"
     },
     "14": {
-      "title": "Lymph Node Ultrasound",
-      "shortDescription": "Ultrasound of lymph nodes",
-      "description": "Ultrasound of lymph nodes helps assess the lymphatic system, detect enlargement, inflammation, or tumors."
+      "title": "Liver elastography + OHP",
+      "shortDescription": "Liver elastography + OHP",
+      "description": "Liver elastography + OHP"
     },
     "15": {
-      "title": "Pelvic Ultrasound in Women",
-      "shortDescription": "Ultrasound of pelvic organs",
-      "description": "Pelvic ultrasound evaluates the uterus, ovaries, fallopian tubes, and other organs without surgical intervention."
+      "title": "Liver elastography + OHP + kidneys",
+      "shortDescription": "Liver elastography + OHP + kidneys",
+      "description": "Liver elastography + OHP + kidneys"
     },
     "16": {
-      "title": "Uterus and Ovary Ultrasound",
-      "shortDescription": "Ultrasound of the uterus and ovaries",
-      "description": "Ultrasound of the uterus and ovaries is a safe diagnostic method for female reproductive organs."
+      "title": "Elastography of the liver + OAB + kidneys + bladder + prostate gland",
+      "shortDescription": "Elastography of the liver + OAB + kidneys + bladder + prostate gland",
+      "description": "Elastography of the liver + OAB + kidneys + bladder + prostate gland"
     },
     "17": {
-      "title": "First Trimester Pregnancy Ultrasound",
-      "shortDescription": "Ultrasound in the first trimester of pregnancy",
-      "description": "First trimester ultrasound allows evaluation of early fetal development, confirms pregnancy, and detects possible pathologies."
+      "title": "Duplex scanning of the neck vessels",
+      "shortDescription": "Duplex scanning of the neck vessels",
+      "description": "Duplex scanning of the neck vessels"
     },
     "18": {
-      "title": "Second Trimester Pregnancy Ultrasound",
-      "shortDescription": "Ultrasound in the second trimester of pregnancy",
-      "description": "Second trimester ultrasound assesses fetal development and pregnancy progress, typically performed between 18-22 weeks."
+      "title": "Duplex scanning of the vessels of the neck and head",
+      "shortDescription": "Duplex scanning of the vessels of the neck and head",
+      "description": "Duplex scanning of the vessels of the neck and head"
     },
     "19": {
-      "title": "Third Trimester Pregnancy Ultrasound",
-      "shortDescription": "Ultrasound in the third trimester of pregnancy",
-      "description": "Third trimester ultrasound evaluates fetal development before birth and identifies potential complications."
+      "title": "Duplex scanning of veins or arteries of both lower extremities",
+      "shortDescription": "Duplex scanning of veins or arteries of both lower extremities",
+      "description": "Duplex scanning of veins or arteries of both lower extremities"
     },
     "20": {
-      "title": "Abdominal and Urinary System Ultrasound",
-      "shortDescription": "Ultrasound of abdominal organs and urinary system",
-      "description": "Evaluation of liver, gallbladder, kidneys, bladder, and prostate. One of the most common and informative diagnostic methods."
+      "title": "Duplex scanning of veins or arteries of the 1st lower limb",
+      "shortDescription": "Duplex scanning of veins or arteries of the 1st lower limb",
+      "description": "Duplex scanning of veins or arteries of the 1st lower limb"
     },
     "21": {
-      "title": "Abdominal Ultrasound",
-      "shortDescription": "Ultrasound of abdominal organs",
-      "description": "Includes liver, intrahepatic bile ducts, gallbladder, pancreas, and spleen."
+      "title": "Duplex scanning of veins and arteries of the lower or upper extremities",
+      "shortDescription": "Duplex scanning of veins and arteries of the lower or upper extremities",
+      "description": "Duplex scanning of veins and arteries of the lower or upper extremities"
     },
     "22": {
-      "title": "Abdominal and Kidney Ultrasound",
-      "shortDescription": "Ultrasound of abdominal organs and kidneys",
-      "description": "Ultrasound evaluates organ size, shape, structure, detects pathological changes, and aids diagnosis or further examination."
+      "title": "Duplex scanning of veins and arteries of 1 lower or upper limb",
+      "shortDescription": "Duplex scanning of veins and arteries of 1 lower or upper limb",
+      "description": "Duplex scanning of veins and arteries of 1 lower or upper limb"
     },
     "23": {
-      "title": "Thyroid Ultrasound",
-      "shortDescription": "Ultrasound of the thyroid gland",
-      "description": "Thyroid ultrasound is a safe and painless method that provides detailed imaging of the gland to detect early-stage diseases."
+      "title": "Lymph nodes (one area)",
+      "shortDescription": "Lymph nodes (one area)",
+      "description": "Lymph nodes (one area)"
     },
     "24": {
-      "title": "Scrotum (Testes) Ultrasound",
-      "shortDescription": "Ultrasound of scrotal organs",
+      "title": "Soft fabrics",
+      "shortDescription": "Soft fabrics",
       "description": "Scrotal ultrasound is a safe method to assess testes, epididymis, and other scrotal structures, widely used in urology."
     },
     "25": {
-      "title": "Urinary System Ultrasound. Kidneys, Bladder",
-      "shortDescription": "Ultrasound of the urinary system",
-      "description": "Urinary system ultrasound is a safe and informative method to evaluate kidneys, ureters, and bladder."
+      "title": "Joint",
+      "shortDescription": "Joint",
+      "description": "Joint"
     },
-    "26": {
-      "title": "Urinary System Ultrasound with Residual Urine Measurement",
-      "shortDescription": "Ultrasound of urinary system with residual urine assessment",
-      "description": "Ultrasound of kidneys, bladder, and prostate with residual urine measurement is a safe method to assess male urinary system health."
-    },
-    "27": {
-      "title": "Breast Ultrasound",
-      "shortDescription": "Ultrasound of the breasts",
-      "description": "Breast ultrasound is a safe and painless method that provides detailed imaging of breast tissue and detects pathologies at early stages."
-    },
-    "28": {
-      "title": "Breast Ultrasound + Elastography",
-      "shortDescription": "Breast ultrasound with elastography",
-      "description": "Breast ultrasound with elastography is a modern diagnostic method that evaluates tissue stiffness and provides more detailed information than standard ultrasound."
-    },
-    "title": "Our Services and Prices",
+    "title": "Price list for ultrasound examination services",
     "min": "min",
     "uah": "UAH",
     "price": "Price",
