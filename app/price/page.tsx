@@ -21,9 +21,9 @@ const ServicesPage: React.FC = () => {
                     <thead className="bg-primary">
                         <tr>
                             <th className="px-4 py-2 text-center text-white font-medium">{t("pricePage.service")}</th>
-                            <th className="px-4 py-2 text-center text-white font-medium">{t("pricePage.description")}</th>
-                            <th className="px-4 py-2 text-center text-white font-medium">{t("pricePage.duration")}</th>
-                            <th className="px-8 py-2 text-center text-white font-medium">{t("pricePage.price")}</th>
+                            {/* <th className="px-4 py-2 text-center text-white font-medium">{t("pricePage.description")}</th>
+                            <th className="px-4 py-2 text-center text-white font-medium">{t("pricePage.duration")}</th> */}
+                            <th className="px-12 py-2 text-center text-white font-medium">{t("pricePage.price")}</th>
                         </tr>
                     </thead>
                     <tbody className="bg-white  divide-y divide-gray-200">
@@ -33,8 +33,8 @@ const ServicesPage: React.FC = () => {
                                 onClick={() => handleRowClick(service.id)}
                                 className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-800 dark:even:bg-gray-900 hover:bg-blue-100 dark:hover:bg-blue-700 transition-colors duration-200 cursor-pointer text-center">
                                 <td className="px-4 py-3 ">{service.title}</td>
-                                <td className="px-4 py-3">{service.shortDescription}</td>
-                                <td className="px-4 py-3">{service.duration} {t("pricePage.min")}</td>
+                                {/* <td className="px-4 py-3">{service.shortDescription}</td>
+                                <td className="px-4 py-3">{service.duration} {t("pricePage.min")}</td> */}
                                 <td className="px-4 py-3">{service.price} {t("pricePage.uah")}</td>
                             </tr>
                         ))}
