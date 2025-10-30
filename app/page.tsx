@@ -25,7 +25,7 @@ function HeroSection(t: (key: string) => string, setIsModalOpen: (open: boolean)
       </div>
 
       <div className="relative z-10 text-center px-6 sm:px-8 md:px-12 max-w-2xl">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+        <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           {t("mainPage.title")}
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-6 ">
