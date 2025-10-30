@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import I18nProvider from "@/providers/I18nProvider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import FloatingCallButton from "@/components/FloatingCallButton";
 
 export const metadata: Metadata = {
   title: "Медцентр УЗД",
@@ -31,6 +32,7 @@ export default function RootLayout({
             <Footer />
           </I18nProvider>
         </ThemeProvider>
+        <FloatingCallButton phone="+380674935104"  />
         <ScrollToTopButton />
       </body>
     </html>
