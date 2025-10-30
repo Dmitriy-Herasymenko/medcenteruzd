@@ -148,14 +148,14 @@ function ServicesSection(t: (key: string) => string) {
       title: t("mainPage.servicesAbdominalUltrasoundTitle"),
       description: t("mainPage.servicesAbdominalUltrasoundDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 600,
+      price: 400,
       waitTime: 15
     },
     {
       title: t("mainPage.servicesHeartTitle"),
       description: t("mainPage.servicesHeartDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 450,
+      price: 500,
       waitTime: 15
     },
     {
@@ -190,7 +190,7 @@ function ServicesSection(t: (key: string) => string) {
       title: t("mainPage.servicesNeckHeadVesselsTitle"),
       description: t("mainPage.servicesNeckHeadVesselsDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 1000,
+      price: 700,
       waitTime: 15
     },
      
@@ -205,7 +205,7 @@ function ServicesSection(t: (key: string) => string) {
       title: t("mainPage.servicesUrinaryTitle"),
       description: t("mainPage.servicesUrinaryDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
-      price: 1250,
+      price: 600,
       waitTime: 45
     },
 
