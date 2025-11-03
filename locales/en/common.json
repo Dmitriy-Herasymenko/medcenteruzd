@@ -86,6 +86,32 @@
     "testimonial6Feedback": "Very friendly and attentive staff.",
     "bookAppointmentKobyliakUltrasoundUman": "Appointment with Dr. Kobylyak for an ultrasound examination in Uman"
   },
+  "aboutUsPage": {
+    "title": "About Us",
+    "subtitle": "Ultrasound Office of Ihor Kobyliak",
+    "description": "We offer a wide range of ultrasound diagnostic services using modern equipment and advanced techniques to provide our patients with accurate and detailed results.",
+    "goalTitle": "Our Goal",
+    "goalText": "To become a reliable partner for doctors and patients in maintaining health. We strive to make ultrasound diagnostics accessible and convenient for everyone who needs it.",
+    "missionTitle": "Key Aspects of Our Mission",
+    "missionList": [
+      "Patient first: individual approach and comfortable conditions.",
+      "Accuracy and reliability: modern equipment and qualified specialists.",
+      "Speed: minimizing waiting time for results.",
+      "Accessibility: affordable diagnostic services.",
+      "Professionalism: continuous professional development.",
+      "Innovation: implementing the latest diagnostic technologies."
+    ],
+    "howTitle": "How We Achieve Our Mission",
+    "howList": [
+      "Modern equipment for accurate results.",
+      "A wide range of studies for all organs and systems.",
+      "Individual approach to every patient.",
+      "Consultation with a diagnostic doctor after the ultrasound.",
+      "Comfortable conditions for patients."
+    ],
+    "conclusion": "By choosing ultrasound diagnostics with Dr. Ihor Kobyliak, you receive accurate and reliable results!",
+    "btn": "Book an Appointment"
+  },
   "footer": {
     "footerContactsTitle": "Contacts",
     "footerPhone": "Phone: ",
