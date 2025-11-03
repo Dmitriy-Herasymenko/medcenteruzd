@@ -7,7 +7,6 @@ import SpecialistsSlider from "../components/SpecialistsSlider";
 import { useTranslation } from "react-i18next";
 import Modal from "@/components/Modal";
 import AppointmentForm from "@/components/AppointmentForm";
-import Button from "@/components/Button";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { SiViber } from "react-icons/si";
 
@@ -99,9 +98,9 @@ function AboutAndWhySection(t: (key: string) => string) {
               {t("mainPage.experiencedDoctors")}
             </p>
 
-            <Button variant="primary" size="md">
+            <Link href="/aboutUs" className="bg-primary hover:bg-[#126fe6] text-white cursor-pointer inline-flex items-center justify-center font-medium rounded-md transition duration-300 shadow-sm px-5 py-2 text-base">
               {t("mainPage.btnAboutUs")}
-            </Button>
+            </Link>
           </div>
         </div>
 
