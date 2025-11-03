@@ -144,7 +144,7 @@ function AboutAndWhySection(t: (key: string) => string) {
 
 function ServicesSection(t: (key: string) => string) {
   const items = [
-     {
+    {
       title: t("mainPage.servicesAbdominalUltrasoundTitle"),
       description: t("mainPage.servicesAbdominalUltrasoundDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
@@ -179,21 +179,21 @@ function ServicesSection(t: (key: string) => string) {
       price: 500,
       waitTime: 15
     },
-      {
+    {
       title: t("mainPage.serviceslowerLimbVeinUltrasoundTitle"),
       description: t("mainPage.serviceslowerLimbVeinUltrasoundDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
       price: 700,
       waitTime: 29
     },
-       {
+    {
       title: t("mainPage.servicesNeckHeadVesselsTitle"),
       description: t("mainPage.servicesNeckHeadVesselsDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
       price: 700,
       waitTime: 15
     },
-     
+
     {
       title: t("mainPage.servicesLymphNodesTitle"),
       description: t("mainPage.servicesLymphNodesDescription"),
@@ -201,7 +201,7 @@ function ServicesSection(t: (key: string) => string) {
       price: 400,
       waitTime: 15
     },
-   {
+    {
       title: t("mainPage.servicesUrinaryTitle"),
       description: t("mainPage.servicesUrinaryDescription"),
       imgUrl: "/imgs/icon_logomed-3_50.svg",
@@ -248,7 +248,7 @@ function ServicesSection(t: (key: string) => string) {
     //   waitTime: 30
     // },
 
- 
+
 
   ];
 
@@ -288,7 +288,7 @@ function ServicesSection(t: (key: string) => string) {
           {showAll ? t("mainPage.collapse") : t("mainPage.showMore")}
         </Button> */}
 
-            <Link href="/price"  className="bg-primary hover:bg-[#126fe6] text-whitebg-primary hover:bg-[#126fe6] text-white cursor-pointer inline-flex items-center justify-center font-medium rounded-md transition duration-300 shadow-sm px-5 py-2 text-base">
+        <Link href="/price" className="bg-primary hover:bg-[#126fe6] text-whitebg-primary hover:bg-[#126fe6] text-white cursor-pointer inline-flex items-center justify-center font-medium rounded-md transition duration-300 shadow-sm px-5 py-2 text-base">
           {t("mainPage.allservices")}
         </Link>
       </div>
@@ -365,7 +365,7 @@ function TestimonialsSection(t: (key: string) => string) {
   );
 }
 
-function Contacts(t: (key: string) => string) {
+function ContactsSection(t: (key: string) => string) {
 
   return (
     <>
@@ -548,6 +548,31 @@ function Contacts(t: (key: string) => string) {
   );
 }
 
+function BookAnAppointmentSection(t: (key: string) => string, setIsModalOpen: (open: boolean) => void) {
+
+  return (
+    <section
+      className="relative w-[90%] h-[300px] bg-cover bg-center flex items-center m-auto rounded-[20px] mb-[60px]"
+      style={{
+        backgroundImage:
+          "url('/imgs/bannerAppointment.jpg')", 
+      }}
+    >
+      <div className="absolute inset-0"></div>
+      <div className="relative z-10 max-w-2xl px-8 text-white">
+        <h2 className="text-xl md:text-4xl font-bold mb-4">
+          {t("mainPage.bookAppointmentKobyliakUltrasoundUman")}
+        </h2>
+        <button onClick={() => setIsModalOpen(true)} className="bg-primary hover:bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition cursor-pointer">
+          {t("btn")}
+        </button>
+      </div>
+    </section>
+
+
+  );
+}
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslation("common");
@@ -559,7 +584,7 @@ export default function Home() {
       {ServicesSection(t)}
       {SpecialistsSection(t, setIsModalOpen)}
       {TestimonialsSection(t)}
-      {Contacts(t)}
+      {ContactsSection(t)}
       <div className=" w-full h-100">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.175419929347!2d30.21890107592255!3d48.75944627131889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d20da8953e6589%3A0x22e976b0eac83120!2z0JrQsNCx0ZbQvdC10YIg0KPQl9CUINCa0L7QsdC40LvRj9C60LA!5e0!3m2!1suk!2sua!4v1761223967521!5m2!1suk!2sua"
@@ -571,6 +596,8 @@ export default function Home() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
+      {BookAnAppointmentSection(t, setIsModalOpen)}
+
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <AppointmentForm onSuccess={() => setIsModalOpen(false)} />
       </Modal>

@@ -7,7 +7,10 @@ export default function FloatingButtons({
 }: {
   phone?: string;
 }) {
-  const sanitizedPhone = phone.replace(/\D/g, "");
+let sanitizedPhone = phone.replace(/[^\d+]/g, "");
+if (!sanitizedPhone.startsWith("+")) {
+  sanitizedPhone = "+38" + sanitizedPhone;
+}
 
   return (
     <>
@@ -15,8 +18,8 @@ export default function FloatingButtons({
         href={`tel:${sanitizedPhone}`}
         aria-label="Call"
         className={`
-          fixed z-50 bottom-18 right-4
-          w-16 h-16 rounded-full
+          fixed z-50 bottom-18 right-5
+          w-12 h-12 rounded-full
           flex items-center justify-center
           text-white shadow-lg
           bg-green-500
