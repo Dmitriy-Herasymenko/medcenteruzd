@@ -64,6 +64,14 @@ export default function AboutPage() {
                         referrerPolicy="no-referrer-when-downgrade"
                     />
                 </div>
+
+                <div className="w-full mt-6">
+                    <video
+                        src="/video/location.mp4"
+                        className="w-full h-[300px] md:h-[500px] rounded-lg"
+                        controls
+                    />
+                </div>
             </div>
 
 
