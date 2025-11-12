@@ -127,7 +127,7 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
 
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/imgs/logo.png" alt="Медцентр УЗД" width={40} height={30} />
+          <Image src="/imgs/logo.png" alt="Медцентр УЗД" width={40} height={30}  className="h-auto w-auto"/>
           <div className="flex flex-col uppercase leading-none">
             <span className="text-[12px] md:text-l font-bold text-[#0156A0]">{t("header.clinic")}</span>
             <span className="text-[12px] md:text-l font-bold text-[#0156A0]">{t("header.customer")}</span>
