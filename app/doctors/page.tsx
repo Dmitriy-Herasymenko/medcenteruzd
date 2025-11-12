@@ -5,6 +5,20 @@ import Link from "next/link";
 import { getDoctorsDara } from "./data/doctors";
 import { useTranslation } from "react-i18next";
 
+interface Doctor {
+  slug: string;
+  name: string;
+  specialty: string;
+  experience: string;
+  practice: string;
+  email: string;
+  phone: string;
+  about: string;
+  specializations: string[];
+  photo: string;
+  certificates: string[];
+}
+
 export default function DoctorsPage() {
   const { t } = useTranslation("common");
   const doctors = getDoctorsDara(t);
@@ -13,7 +27,7 @@ export default function DoctorsPage() {
       <h1 className="heading-h1 text-center mb-12">{t("doctors.ourDoctors")}</h1>
 
       <div className="max-w-4xl mx-auto justify-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
-        {doctors?.map((doc:any) => (
+        {doctors?.map((doc:Doctor) => (
           <div
             key={doc.slug}
             className="bg-white dark:bg-[#133b88] rounded-[20px] shadow-lg overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-1"
